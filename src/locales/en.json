@@ -9,8 +9,8 @@
   "nav": {},
   "home": {
     "meta": {
-      "title": "VV: ULTIMATUM — Codes, Builds, Guides | VV Ultimatum Wiki",
-      "description": "Complete VV: ULTIMATUM wiki with active codes, boss strategies, race guides, build optimization, and progression walkthroughs for Shinigami, Quincy, and Hollow."
+      "title": "Dead or Alive 6 Last Round Wiki - Fighters & Guides",
+      "description": "Master Dead or Alive 6 Last Round with fighter guides, tier lists, combos, controls, Photo Mode tips, unlocks, stages, and Core Fighters help."
     },
     "hero": {
       "eyebrow": "Independent Fan-Made Fighting Game Wiki",
@@ -29,33 +29,33 @@
       "videoLabel": "Official Announcement Trailer"
     },
     "updates": {
-      "title": "动态更新",
+      "title": "Latest Updates",
       "browse": "Browse All Guides",
       "viewAll": "View All"
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your VV Ultimatum Journey",
+      "title": "Your Dead or Alive 6 Last Round Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Learn movement, blocking, the strike-throw-hold triangle, Break Gauge basics, and the fastest settings to change before your first match."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Combat System",
+          "description": "Understand Holds, Throws, Fatal Rush, Break Blow, wall pressure, and Danger Zones so you can stop button-mashing and begin making deliberate decisions."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Fighters and Combos",
+          "description": "Compare all 29 fighters by playstyle, difficulty, speed, range, and beginner value, then learn practical launchers, juggles, and punish combos."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in VV Ultimatum."
+          "title": "Photo Mode and Data Transfer",
+          "description": "Set poses, expressions, camera angles, sweat, and dirt in Photo Mode, and follow platform-specific steps for moving eligible DOA6 saves and costumes."
         }
       ]
     },
@@ -63,328 +63,347 @@
       "eyebrow": "Popular Pages",
       "title": "Trending Now",
       "quickLinks": [
-        "Hollow Progression",
-        "Fastest Leveling",
-        "Spirit Charms",
-        "All Boss Guides"
+        "Beginner Guide",
+        "Fighter Roster",
+        "Core Fighters",
+        "Photo Mode"
       ],
       "cards": [
         {
           "badge": "Beginner",
           "title": "Beginner Guide",
-          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
+          "description": "Learn the triangle system, Break Gauge, defensive Holds, and practical first-match habits.",
           "href": "/beginner-guide"
         },
         {
-          "badge": "Updated",
-          "title": "Active Codes",
-          "description": "All working codes with rewards redeem before they expire.",
-          "href": "/codes"
+          "badge": "Roster",
+          "title": "Characters",
+          "description": "Compare the 29-fighter standard roster, returning bonus fighters, and separately sold collaboration fighters.",
+          "href": "/characters"
         },
         {
-          "badge": "Updated",
-          "title": "Equipment Database",
-          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
-          "href": "/equipment"
+          "badge": "Free",
+          "title": "Core Fighters",
+          "description": "See what the free Core Fighters edition includes before deciding which unlock keys to buy.",
+          "href": "/core-fighters"
         },
         {
-          "badge": "Popular",
-          "title": "Which Race Should You Pick?",
-          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
-          "href": "/races/best-race"
+          "badge": "Systems",
+          "title": "Modes and Crossplay",
+          "description": "Check offline modes, training tools, online play, DOA Central, and platform matching limits.",
+          "href": "/modes-crossplay"
         },
         {
-          "badge": "New",
-          "title": "Enemies & Monsters",
-          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
-          "href": "/enemies"
+          "badge": "Guide",
+          "title": "Photo Mode Guide",
+          "description": "Create portraits and action scenes with character placement, poses, expressions, and visual options.",
+          "href": "/photo-mode"
         },
         {
-          "badge": "Popular",
-          "title": "Boss Locations & Drops",
-          "description": "Every boss location, drop table, and respawn timer in one reference.",
-          "href": "/boss-locations-drops-respawn-times"
+          "badge": "Transfer",
+          "title": "Save Transfer Guide",
+          "description": "Move eligible Dead or Alive 6 progress, owned items, and costumes into Last Round.",
+          "href": "/save-transfer"
         },
         {
-          "badge": "Popular",
-          "title": "Best Builds",
-          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
-          "href": "/builds/best-builds"
+          "badge": "DLC",
+          "title": "Costumes and DLC",
+          "description": "Review new costumes, carry-over rules, collaboration exceptions, and Premium Ticket limits.",
+          "href": "/costumes-dlc"
         },
         {
-          "badge": "New",
-          "title": "Shikai Tier List",
-          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
-          "href": "/tier-list/shikai"
-        },
-        {
-          "badge": "New",
-          "title": "World Events Guide",
-          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
-          "href": "/world-events"
+          "badge": "Stages",
+          "title": "Stages and Danger Zones",
+          "description": "Learn how walls, ropes, fireworks, crowds, vehicles, and breakable objects can change a match.",
+          "href": "/stages"
         }
       ]
     },
     "aboutGame": {
-      "title": "What is VV: ULTIMATUM?",
+      "title": "What is Dead or Alive 6 Last Round?",
       "paragraphs": [
-        "VV: ULTIMATUM is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Dead or Alive 6 Last Round is the current-generation definitive edition of Team NINJA's fast-paced 3D fighting game. Its combat revolves around a tactical triangle of strikes, throws, and holds, supported by explosive stage hazards and cinematic Break Gauge attacks.",
+        "The Last Round edition launches with 29 playable fighters, five new costumes, current-generation optimization, and a flexible Photo Mode. A free Core Fighters edition opens most modes with four starting characters, while the full edition includes the main roster and Story unlock."
       ],
       "stats": [
         {
           "label": "Developer",
-          "value": "Midnight Continent"
+          "value": "Team NINJA"
         },
         {
-          "label": "Platform",
-          "value": "Roblox"
+          "label": "Platforms",
+          "value": "PS5 / Xbox Series X|S / Steam"
         },
         {
           "label": "Genre",
-          "value": "Fighting RPG"
+          "value": "3D Fighting Action"
         },
         {
-          "label": "Visits",
-          "value": "12.6M+"
+          "label": "Playable Fighters",
+          "value": "29"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
+          "label": "Battle Stages",
+          "value": "13"
         },
         {
-          "label": "Total Skills",
-          "value": "130+"
+          "label": "Free Core Fighters",
+          "value": "4"
         },
         {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Steam Achievements",
+          "value": "37"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "VV Ultimatum Homepage Modules Navigation",
-      "description": "Jump straight to the eight homepage sections and scroll to the module you need.",
+      "title": "Dead or Alive 6 Last Round Guide Modules",
+      "description": "Jump straight to character lists, beginner systems, Core Fighters details, Photo Mode steps, save transfer notes, DLC rules, and stage hazard guides.",
       "modules": [
         {
           "order": 1,
-          "name": "VV Ultimatum Codes",
-          "description": "Redeem the current VV Ultimatum code before spending rerolls so you can test faction ideas with more room to pivot.",
-          "href": "/codes",
-          "displayType": "code-cards",
+          "name": "Dead or Alive 6 Last Round Characters",
+          "description": "Explore the complete playable roster and see which fighters are included in the full version. The page separates the original 24-character lineup, the five returning bonus fighters, and the separately sold collaboration characters.",
+          "href": "/characters",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "day1",
-              "detail": "3× Clan Reroll + Token Booster + Focus Elixir",
-              "badge": "Active"
+              "label": "Full Roster",
+              "detail": "The standard version includes 29 playable characters."
+            },
+            {
+              "label": "Original Fighters",
+              "detail": "Kasumi, Marie Rose, Honoka, NiCO, Helena, Hayate, Hayabusa, Jann Lee, Zack, Diego, Rig, Hitomi, Leifang, Ayane, Bayman, Bass, Tina, Mila, Christie, Kokoro, La Mariposa, Brad Wong, Eliot, and Raidou."
+            },
+            {
+              "label": "Bonus Fighters",
+              "detail": "Nyotengu, Phase 4, Tamaki, Momiji, and Rachel are added to the original 24-character lineup."
+            },
+            {
+              "label": "Collab Fighters",
+              "detail": "Mai Shiranui and Kula Diamond are listed separately and require their own Character Unlock Keys."
             }
           ]
         },
         {
           "order": 2,
-          "name": "VV Ultimatum Beginner Guide",
-          "description": "Use the first hour to lock in a faction route, learn the live controls, and push quests instead of burning resources on random rerolls.",
-          "href": "/guide/vv-ultimatum-beginner-guide-2026",
+          "name": "Dead or Alive 6 Last Round Beginner Guide",
+          "description": "Learn the core systems that make Dead or Alive different from other 3D fighting games. This guide covers the triangle system, Fatal Rush, the Break Gauge, defensive Holds, and stage hazards in a practical learning order.",
+          "href": "/beginner-guide",
           "displayType": "step-by-step",
           "highlights": [
             {
               "label": "1",
-              "detail": "Choose a faction route before spending rerolls"
+              "detail": "Start with Tutorial and Free Training to learn movement, guarding, strikes, throws, and Holds."
             },
             {
               "label": "2",
-              "detail": "Finish the opening path and learn the live controls"
+              "detail": "Memorize the triangle system: strikes beat throws, throws beat Holds, and Holds beat strikes."
             },
             {
               "label": "3",
-              "detail": "Redeem the launch code once the Shop unlocks"
+              "detail": "Practice Fatal Rush, a Special-button combo of up to four attacks designed to give new players an accessible offensive sequence."
             },
             {
               "label": "4",
-              "detail": "Push story quests before side grinding"
+              "detail": "Build the Break Gauge through combat; spend 50% on Break Hold or 100% on Break Blow."
             },
             {
               "label": "5",
-              "detail": "Start mission systems as soon as they open"
-            },
-            {
-              "label": "6",
-              "detail": "Spend early points around one damage plan"
+              "detail": "Use walls, crowds, breakable objects, and Danger Zones to extend damage and create advantageous situations."
             }
           ]
         },
         {
           "order": 3,
-          "name": "VV Ultimatum Official Links",
-          "description": "Verified destinations worth bookmarking for the real game page, community channels, and official video feed.",
-          "href": "/codes",
+          "name": "Dead or Alive 6 Last Round Core Fighters",
+          "description": "Compare the free-to-play Core Fighters edition with the paid standard version before downloading. The page explains the free roster, included modes, unlock requirements, and which features remain available without purchasing the full game.",
+          "href": "/core-fighters",
           "displayType": "card-list",
           "highlights": [
             {
-              "label": "🎮",
-              "detail": "VV: ULTIMATUM on Roblox"
+              "label": "Free Fighters",
+              "detail": "Kasumi, Marie Rose, Honoka, and NiCO are playable from the start.",
+              "badge": "Free"
             },
             {
-              "label": "💬",
-              "detail": "Official Discord Server"
+              "label": "Modes",
+              "detail": "Core Fighters includes Versus, Arcade, Time Attack, Survival, training modes, Ranked Match, Lobby Match, DOA Central, and Photo Mode."
             },
             {
-              "label": "📺",
-              "detail": "Official YouTube Channel"
+              "label": "Story",
+              "detail": "Story Mode is excluded unless a Story Unlock Key is purchased."
             },
             {
-              "label": "🐦",
-              "detail": "VV Ultimatum on X"
+              "label": "Unlock Keys",
+              "detail": "Characters outside the four-fighter starting roster require separate Character Unlock Keys in Core Fighters."
             },
             {
-              "label": "🎵",
-              "detail": "VV Ultimatum on TikTok"
-            },
-            {
-              "label": "👥",
-              "detail": "Roblox Community Group"
+              "label": "Full Version",
+              "detail": "The paid standard version includes the Story Unlock Key and Character Unlock Keys for its 29-character roster."
             }
           ]
         },
         {
           "order": 4,
-          "name": "VV Ultimatum Clans Tier List",
-          "description": "Treat Clan Rerolls as route-shaping resources. The best keeps depend on faction identity.",
-          "href": "/tier-list",
-          "displayType": "tier-grid",
+          "name": "Dead or Alive 6 Last Round Modes and Crossplay",
+          "description": "Check every major offline, training, customization, and online mode included in Last Round. The page also clarifies the game's cross-platform limitations so players know who they can match with.",
+          "href": "/modes-crossplay",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Kurosaki · Shihoin · Cifer — Do not reroll"
+              "label": "Offline",
+              "detail": "Versus, Arcade, Time Attack, and Survival modes are available."
             },
             {
-              "label": "A",
-              "detail": "Eisenhauer · Ishida · Kamamura · Aaroniero — Keep for build"
+              "label": "Training",
+              "detail": "Free Training, Tutorial, Command Training, and Combo Training are included."
             },
             {
-              "label": "B",
-              "detail": "Parnkgjas · Hitsugaya · Antenor — Good for leveling"
+              "label": "Progression",
+              "detail": "Story Mode and DOA Quest provide structured single-player content."
             },
             {
-              "label": "C",
-              "detail": "Schulte · Madarame · Calius — Reroll when affordable"
+              "label": "Online",
+              "detail": "Ranked Match and Lobby Match are supported."
+            },
+            {
+              "label": "DOA Central",
+              "detail": "Wardrobe, Database, Theater, Music, Library, and Photo Mode are available from the central hub."
+            },
+            {
+              "label": "Crossplay",
+              "detail": "Crossplay between different platforms is not supported, and Dead or Alive 6 cannot play online with Dead or Alive 6 Last Round."
             }
           ]
         },
         {
           "order": 5,
-          "name": "VV Ultimatum Skill Tree Tier List",
-          "description": "Builds work best when players choose a clear combat core instead of spreading Skill Points across unrelated routes.",
-          "href": "/skills/vv-ultimatum-best-skills-ranked",
-          "displayType": "tier-grid",
+          "name": "Dead or Alive 6 Last Round Photo Mode Guide",
+          "description": "Create character portraits and action scenes with the new Photo Mode. This guide explains the official workflow for choosing a scene, positioning fighters, changing poses and expressions, and capturing the finished image.",
+          "href": "/photo-mode",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Hakuda (melee combos) · Speed (mobility core)"
+              "label": "1",
+              "detail": "Open Photo Mode and choose the stage and characters for the scene."
             },
             {
-              "label": "A",
-              "detail": "Quincy (bow pressure) · Strength (heavy hits) · Shinigami (Kido control)"
+              "label": "2",
+              "detail": "Move, rotate, and place each character to build the composition."
             },
             {
-              "label": "B",
-              "detail": "Hollow / Arrancar (Cero burst windows)"
+              "label": "3",
+              "detail": "Select character skills or poses to create an action shot or a staged portrait."
             },
             {
-              "label": "Utility",
-              "detail": "Sense (target reading) · Misc (universal combat tools)"
+              "label": "4",
+              "detail": "Adjust facial expressions, sweat, dirt, and other visual details."
+            },
+            {
+              "label": "5",
+              "detail": "Capture the final image with the screenshot function provided by the selected platform."
             }
           ]
         },
         {
           "order": 6,
-          "name": "VV Ultimatum Weapons Tier List",
-          "description": "Weapon choices are tied to race. Quincy get the clearest starter list, while Shinigami focus on Zanpakuto growth.",
-          "href": "/tier-list",
-          "displayType": "tier-grid",
+          "name": "Dead or Alive 6 Last Round Save Transfer Guide",
+          "description": "Move eligible Dead or Alive 6 progression, owned items, and costumes into Last Round without losing supported data. The instructions cover the shared-account requirement, platform-specific preparation, the in-game transfer prompt, and important restrictions.",
+          "href": "/save-transfer",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "S",
-              "detail": "Sword — Balanced all-rounder, safest Quincy starter"
+              "label": "1",
+              "detail": "Use the same PlayStation Network, Xbox, or Steam account that owns the original save data and eligible DLC."
             },
             {
-              "label": "A",
-              "detail": "Spear (long reach) · Longsword (safe range)"
+              "label": "2",
+              "detail": "On PlayStation, update the PlayStation 4 version of Dead or Alive 6 to version 1.23, open the game, and upload the DLC data from the Main Menu."
             },
             {
-              "label": "B",
-              "detail": "Greatsword · Hammer · Club — Heavy or niche pressure"
+              "label": "3",
+              "detail": "On Xbox Series X|S or Steam, start Last Round with the same account so eligible linked DLC can be detected automatically."
             },
             {
-              "label": "C",
-              "detail": "Rifle · Rapier — Playable but outclassed"
+              "label": "4",
+              "detail": "Make the original save accessible on the new console or PC, launch Last Round, and select Transfer when the title-screen prompt appears."
+            },
+            {
+              "label": "5",
+              "detail": "Complete the import before creating Last Round save data; an existing Last Round save must be deleted before the old save can be transferred."
             }
           ]
         },
         {
           "order": 7,
-          "name": "VV Ultimatum Hollow Progression Guide",
-          "description": "Hollow progression rewards patience: rushing mask removal too early can leave the final build weaker than necessary.",
-          "href": "/guide/VV-Ultimatum-bleach",
-          "displayType": "step-by-step",
+          "name": "Dead or Alive 6 Last Round Costumes and DLC",
+          "description": "See what new cosmetic content is included and which purchases from Dead or Alive 6 can carry over. The page also identifies important exceptions involving collaboration costumes, character unlocks, and Premium Tickets.",
+          "href": "/costumes-dlc",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Choose a Hollow Type (Gorilla, Lizard, Turtle, Centipede)"
+              "label": "New Costumes",
+              "detail": "Last Round adds five new costumes for Kasumi, Ayane, Marie Rose, Honoka, and NiCO.",
+              "badge": "New"
             },
             {
-              "label": "2",
-              "detail": "Consume Hollows and collect matching traits"
+              "label": "Old Costumes",
+              "detail": "Most previously purchased Dead or Alive 6 costumes can transfer when the same platform account is used."
             },
             {
-              "label": "3",
-              "detail": "Advance from base Hollow → Menos → Adjuchas"
+              "label": "Collab Costumes",
+              "detail": "Previously purchased costumes for Mai Shiranui and Kula Diamond cannot be carried over."
             },
             {
-              "label": "4",
-              "detail": "Push to Vasto Lorde for the 4-trait ceiling"
+              "label": "Unlocks",
+              "detail": "Additional-character unlocks from Dead or Alive 6 do not transfer; the standard edition includes 29 fighters, while Mai Shiranui and Kula Diamond require separate keys."
             },
             {
-              "label": "5",
-              "detail": "Remove mask → Become Arrancar or Vastocar"
-            },
-            {
-              "label": "6",
-              "detail": "Meditate and win the Resurrection Fight"
+              "label": "Tickets",
+              "detail": "Premium Tickets from the PlayStation 4 version of Dead or Alive 6 cannot be used in Last Round."
             }
           ]
         },
         {
           "order": 8,
-          "name": "VV Ultimatum Shinigami Progression Guide",
-          "description": "The Shinigami route is built around steady questing, Soul Pager missions, meditation timing, and the eventual Shikai fight.",
-          "href": "/races/vv-ultimatum-shinigami-guide",
-          "displayType": "step-by-step",
+          "name": "Dead or Alive 6 Last Round Stages and Danger Zones",
+          "description": "Learn the environmental hazards, transitions, and destructible features found across Last Round's arenas. The stage guide highlights locations where fireworks, crowds, walls, vehicles, ropes, and breakable objects can change a match.",
+          "href": "/stages",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "1",
-              "detail": "Run Main Story Quests to unlock the progression loop"
+              "label": "Oboro",
+              "detail": "Lost Paradise: Oboro is an enhanced version of the tropical stage updated with the new Oboro lighting system."
             },
             {
-              "label": "2",
-              "detail": "Unlock Soul Society and buy the Soul Pager"
+              "label": "Festival",
+              "detail": "Unused fireworks scattered around the Chinese Festival stage can explode when disturbed."
             },
             {
-              "label": "3",
-              "detail": "Reach Level 25 and start meditation"
+              "label": "Unforgettable",
+              "detail": "A gallery-like arena combining memorable locations and functioning Danger Zones from earlier Dead or Alive games."
             },
             {
-              "label": "4",
-              "detail": "Respond to Spirit Whispers for Shikai EXP"
+              "label": "Hidden Garden",
+              "detail": "Knocking an opponent through the bamboo-covered hillside transitions the fight into the secluded Hidden Garden."
             },
             {
-              "label": "5",
-              "detail": "Solve the Bells Puzzle in the Inner World"
+              "label": "The Muscle",
+              "detail": "A wrestling arena featuring fire pillars and electrically charged ring ropes."
             },
             {
-              "label": "6",
-              "detail": "Fight the Shikai NPC and unlock Shikai weapon"
+              "label": "Colosseum",
+              "detail": "The tournament's main martial-arts stage triggers explosions when fighters touch the ring ropes."
+            },
+            {
+              "label": "Rumble Danger",
+              "detail": "Spectators can push a launched fighter back into the arena and leave them staggered."
+            },
+            {
+              "label": "Destruction",
+              "detail": "Boxes, jars, and other stage objects can be broken for extra damage and do not regenerate."
             }
           ]
         }
@@ -392,27 +411,31 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about VV: ULTIMATUM.",
+      "description": "Quick answers to the most common questions about Dead or Alive 6 Last Round.",
       "items": [
         {
-          "question": "What is VV: ULTIMATUM?",
-          "answer": "VV: ULTIMATUM is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of three races Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Dead or Alive 6 Last Round?",
+          "answer": "Dead or Alive 6 Last Round is the current-generation definitive edition of Team NINJA's 3D fighting game for PS5, Xbox Series X|S, and Steam. It focuses on the strike, throw, and hold triangle, stage hazards, Break Gauge attacks, and Photo Mode."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How many fighters are in Dead or Alive 6 Last Round?",
+          "answer": "Dead or Alive 6 Last Round includes 29 playable fighters in the standard version, with the original roster expanded by Nyotengu, Phase 4, Tamaki, Momiji, and Rachel. Mai Shiranui and Kula Diamond are handled as separate collaboration fighter unlocks."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "What is included in Dead or Alive 6 Last Round Core Fighters?",
+          "answer": "Dead or Alive 6 Last Round Core Fighters starts with Kasumi, Marie Rose, Honoka, and NiCO, plus modes such as Versus, Arcade, Time Attack, Survival, training, Ranked Match, Lobby Match, DOA Central, and Photo Mode. Story Mode and additional fighters require unlock keys."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "Does Dead or Alive 6 Last Round support crossplay?",
+          "answer": "Dead or Alive 6 Last Round does not support crossplay between different platforms. Online play is also separated from the original Dead or Alive 6, so the two versions cannot match with each other online."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "Can Dead or Alive 6 saves and DLC transfer to Dead or Alive 6 Last Round?",
+          "answer": "Dead or Alive 6 Last Round can import eligible progress, owned items, and supported costumes when the same platform account is used. Some content has exceptions, including collaboration costumes, additional-character unlocks, and PlayStation 4 Premium Tickets."
+        },
+        {
+          "question": "What can players do in Dead or Alive 6 Last Round Photo Mode?",
+          "answer": "Dead or Alive 6 Last Round Photo Mode lets players choose stages and fighters, move and rotate characters, set poses or skills, adjust expressions and visual details, and capture the scene with the selected platform screenshot function."
         }
       ]
     },
@@ -426,10 +449,9 @@
   "bosses": {},
   "shared": {
     "wikiNavigation": "Wiki Navigation",
-    "activeCodes": "Active Codes",
+    "activeCodes": "Guide Status",
     "updated": "Updated",
-    "viewAllCodes": "View all codes",
-    "playOnRoblox": "Play on Roblox",
+    "viewAllCodes": "View guide index",
     "inThisSection": "In this section",
     "tableOfContents": "Table of Contents",
     "nextSteps": "Next Steps",
@@ -439,7 +461,8 @@
     "readMore": "Read more",
     "officialMedia": "Official media",
     "home": "Home",
-    "noGuidesAvailable": "No guides available yet. Check back soon!"
+    "noGuidesAvailable": "No guides available yet. Check back soon!",
+    "playOnSteam": "Play on Steam"
   },
   "footer": {
     "aboutTitle": "Dead or Alive 6 Last Round Wiki",
@@ -452,12 +475,12 @@
     "playGame": "Play on Steam",
     "officialDiscord": "KOEI TECMO Global Discord",
     "officialYoutube": "KOEI TECMO AMERICA YouTube",
-    "vvBuilder": "Steam Community Hub",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Race Guides",
-    "bossGuides": "Boss Guides",
-    "buildGuide": "Build Guide",
+    "raceGuides": "Fighter Guides",
+    "bossGuides": "Stage Guides",
+    "buildGuide": "Combo Guide",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "communityHub": "Steam Community Hub"
   }
 }
