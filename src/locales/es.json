@@ -1,1 +1,529 @@
-{}
+{
+  "site": {
+    "name": "Wiki de Dead or Alive 6 Last Round",
+    "shortName": "Wiki DOA6 Last Round",
+    "tagline": "Wiki de juegos de lucha hecho por fans",
+    "description": "Centro de guías no oficial y hecho por fans sobre Dead or Alive 6 Last Round para PS5, Xbox Series X|S y Steam, con luchadores, combos, escenarios, controles, Modo Foto, desbloqueos y ayuda con Core Fighters.",
+    "legalNotice": "Wiki no oficial hecho por fans. No afiliado con Team NINJA ni con KOEI TECMO GAMES."
+  },
+  "nav": {
+    "guide": "Guía",
+    "release": "Lanzamiento",
+    "platforms": "Plataformas",
+    "characters": "Personajes",
+    "features": "Características",
+    "media": "Multimedia",
+    "reviews": "Análisis",
+    "community": "Comunidad",
+    "toggleTheme": "Cambiar tema",
+    "menu": "Menú"
+  },
+  "home": {
+    "meta": {
+      "title": "Wiki de Dead or Alive 6 Last Round - Luchadores y Guías",
+      "description": "Domina Dead or Alive 6 Last Round con guías de luchadores, listas de tiers, combos, controles, consejos del Modo Foto, desbloqueos, escenarios y ayuda con Core Fighters."
+    },
+    "hero": {
+      "eyebrow": "Wiki de juegos de lucha independiente hecho por fans",
+      "title": "Wiki de Dead or Alive 6 Last Round",
+      "description": "Vuelve a la arena 3D rápida y táctica de Team NINJA en PS5, Xbox Series X|S y Steam. Aprende el triángulo de golpe, lanzamiento y contra, compara 29 luchadores, domina los peligros de los escenarios y usa el Modo Foto con confianza.",
+      "stats": [
+        "Lanzado el 25 de junio de 2026",
+        "29 luchadores jugables",
+        "13 escenarios de combate",
+        "4 Core Fighters gratuitos",
+        "37 logros de Steam"
+      ],
+      "primaryCta": "Empezar la guía de PS5/Xbox/Steam",
+      "secondaryCta": "Comparar luchadores",
+      "tertiaryCta": "Probar Core Fighters",
+      "videoLabel": "Tráiler oficial del anuncio"
+    },
+    "updates": {
+      "title": "Últimas actualizaciones",
+      "browse": "Ver todas las guías",
+      "viewAll": "Ver todo"
+    },
+    "start": {
+      "eyebrow": "Empieza aquí",
+      "title": "Tu camino en Dead or Alive 6 Last Round",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guía para principiantes",
+          "description": "Aprende movimiento, bloqueo, el triángulo golpe-lanzamiento-contra, los conceptos del Break Gauge y los ajustes más rápidos que deberías cambiar antes de tu primera partida."
+        },
+        {
+          "number": "2",
+          "title": "Sistema de combate",
+          "description": "Entiende los Holds, los lanzamientos, Fatal Rush, Break Blow, la presión contra pared y las Danger Zones para dejar de pulsar botones a ciegas y empezar a tomar decisiones."
+        },
+        {
+          "number": "3",
+          "title": "Luchadores y combos",
+          "description": "Compara los 29 luchadores por estilo, dificultad, velocidad, alcance y utilidad para principiantes, y luego aprende launchers, juggles y combos de castigo prácticos."
+        },
+        {
+          "number": "4",
+          "title": "Modo Foto y transferencia de datos",
+          "description": "Configura poses, expresiones, ángulos de cámara, sudor y suciedad en el Modo Foto, y sigue los pasos específicos de cada plataforma para mover las partidas y trajes compatibles de DOA6."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "Páginas populares",
+      "title": "Tendencias ahora",
+      "quickLinks": [
+        "Guía para principiantes",
+        "Plantilla de luchadores",
+        "Core Fighters",
+        "Modo Foto"
+      ],
+      "cards": [
+        {
+          "badge": "Principiante",
+          "title": "Guía para principiantes",
+          "description": "Aprende el sistema del triángulo, el Break Gauge, los Holds defensivos y los hábitos prácticos para tu primera partida.",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide"
+        },
+        {
+          "badge": "Plantilla",
+          "title": "Personajes",
+          "description": "Compara los 29 luchadores de la plantilla estándar, los luchadores bonus que regresan y los luchadores de colaboración que se venden aparte.",
+          "href": "/characters"
+        },
+        {
+          "badge": "Gratis",
+          "title": "Core Fighters",
+          "description": "Descubre qué incluye la edición gratuita Core Fighters antes de decidir qué llaves de desbloqueo comprar.",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters"
+        },
+        {
+          "badge": "Sistemas",
+          "title": "Modos y juego cruzado",
+          "description": "Comprueba los modos offline, herramientas de entrenamiento, juego online, DOA Central y los límites de emparejamiento entre plataformas.",
+          "href": "/features/dead-or-alive-6-last-round-crossplay"
+        },
+        {
+          "badge": "Guía",
+          "title": "Guía del Modo Foto",
+          "description": "Crea retratos y escenas de acción con la colocación de personajes, poses, expresiones y opciones visuales.",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode"
+        },
+        {
+          "badge": "Transferir",
+          "title": "Guía de transferencia de partidas",
+          "description": "Traslada a Last Round el progreso, los objetos y los trajes compatibles de Dead or Alive 6.",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over"
+        },
+        {
+          "badge": "DLC",
+          "title": "Trajes y DLC",
+          "description": "Revisa los trajes nuevos, las reglas de transferencia, las excepciones de colaboración y los límites de los Premium Ticket.",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc"
+        },
+        {
+          "badge": "Escenarios",
+          "title": "Escenarios y Danger Zones",
+          "description": "Aprende cómo las paredes, cuerdas, fuegos artificiales, público, vehículos y objetos rompibles pueden cambiar una partida.",
+          "href": "/features"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "¿Qué es Dead or Alive 6 Last Round?",
+      "paragraphs": [
+        "Dead or Alive 6 Last Round es la edición definitiva para la generación actual del rápido juego de lucha 3D de Team NINJA. Su combate gira en torno al triángulo táctico de golpes, lanzamientos y contras, apoyado por los explosivos peligros de los escenarios y los ataques cinematográficos del Break Gauge.",
+        "La edición Last Round llega con 29 luchadores jugables, cinco trajes nuevos, optimización para la generación actual y un flexible Modo Foto. Una edición gratuita Core Fighters abre la mayoría de modos con cuatro personajes iniciales, mientras que la edición completa incluye la plantilla principal y el desbloqueo del Modo Historia."
+      ],
+      "stats": [
+        {
+          "label": "Desarrollador",
+          "value": "Team NINJA"
+        },
+        {
+          "label": "Plataformas",
+          "value": "PS5 / Xbox Series X|S / Steam"
+        },
+        {
+          "label": "Género",
+          "value": "Acción de lucha 3D"
+        },
+        {
+          "label": "Luchadores jugables",
+          "value": "29"
+        },
+        {
+          "label": "Escenarios de combate",
+          "value": "13"
+        },
+        {
+          "label": "Core Fighters gratis",
+          "value": "4"
+        },
+        {
+          "label": "Logros de Steam",
+          "value": "37"
+        }
+      ],
+      "cta": "Explorar todas las guías"
+    },
+    "explore": {
+      "title": "Módulos de la guía de Dead or Alive 6 Last Round",
+      "description": "Salta directo a las listas de personajes, sistemas para principiantes, detalles de Core Fighters, pasos del Modo Foto, notas de transferencia de partidas, reglas de DLC y guías de peligros de los escenarios.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Personajes de Dead or Alive 6 Last Round",
+          "description": "Explora la plantilla jugable completa y comprueba qué luchadores están incluidos en la versión completa. La página separa la línea original de 24 personajes, los cinco luchadores bonus que regresan y los luchadores de colaboración que se venden por separado.",
+          "href": "/characters",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Plantilla completa",
+              "detail": "La versión estándar incluye 29 personajes jugables."
+            },
+            {
+              "label": "Luchadores originales",
+              "detail": "Kasumi, Marie Rose, Honoka, NiCO, Helena, Hayate, Hayabusa, Jann Lee, Zack, Diego, Rig, Hitomi, Leifang, Ayane, Bayman, Bass, Tina, Mila, Christie, Kokoro, La Mariposa, Brad Wong, Eliot y Raidou."
+            },
+            {
+              "label": "Luchadores bonus",
+              "detail": "Nyotengu, Phase 4, Tamaki, Momiji y Rachel se suman a la línea original de 24 personajes."
+            },
+            {
+              "label": "Luchadores de colaboración",
+              "detail": "Mai Shiranui y Kula Diamond se listan por separado y requieren sus propias llaves de desbloqueo de personaje."
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Guía para principiantes de Dead or Alive 6 Last Round",
+          "description": "Aprende los sistemas principales que hacen que Dead or Alive sea diferente de otros juegos de lucha 3D. Esta guía cubre el sistema del triángulo, Fatal Rush, el Break Gauge, los Holds defensivos y los peligros de los escenarios en un orden práctico de aprendizaje.",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Comienza con el Tutorial y el Entrenamiento libre para aprender movimiento, guardia, golpes, lanzamientos y Holds."
+            },
+            {
+              "label": "2",
+              "detail": "Memoriza el triángulo: los golpes ganan a los lanzamientos, los lanzamientos ganan a los Holds y los Holds ganan a los golpes."
+            },
+            {
+              "label": "3",
+              "detail": "Practica Fatal Rush, un combo de hasta cuatro ataques diseñado para dar a los nuevos jugadores una secuencia ofensiva accesible."
+            },
+            {
+              "label": "4",
+              "detail": "Llena el Break Gauge en el combate; gasta 50% en Break Hold o 100% en Break Blow."
+            },
+            {
+              "label": "5",
+              "detail": "Aprovecha paredes, público, objetos rompibles y Danger Zones para extender el daño y crear situaciones ventajosas."
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Core Fighters de Dead or Alive 6 Last Round",
+          "description": "Compara la edición gratuita Core Fighters con la versión estándar de pago antes de descargarla. La página explica la plantilla gratuita, los modos incluidos, los requisitos de desbloqueo y qué funciones siguen disponibles sin comprar el juego completo.",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Luchadores gratis",
+              "detail": "Kasumi, Marie Rose, Honoka y NiCO se pueden usar desde el inicio.",
+              "badge": "Gratis"
+            },
+            {
+              "label": "Modos",
+              "detail": "Core Fighters incluye Versus, Arcade, Contrarreloj, Supervivencia, modos de entrenamiento, Ranked Match, Lobby Match, DOA Central y Modo Foto."
+            },
+            {
+              "label": "Historia",
+              "detail": "El Modo Historia queda excluido salvo que compres una Llave de desbloqueo de Historia."
+            },
+            {
+              "label": "Llaves de desbloqueo",
+              "detail": "Los personajes fuera de la plantilla inicial de cuatro requieren llaves de desbloqueo individuales en Core Fighters."
+            },
+            {
+              "label": "Versión completa",
+              "detail": "La versión estándar de pago incluye la Llave de Historia y las Llaves de Desbloqueo de Personaje para la plantilla de 29."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Modos y juego cruzado de Dead or Alive 6 Last Round",
+          "description": "Consulta todos los modos principales offline, de entrenamiento, de personalización y online incluidos en Last Round. La página también aclara las limitaciones de juego cruzado entre plataformas para que sepas con quién puedes emparejar.",
+          "href": "/features/dead-or-alive-6-last-round-crossplay",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Offline",
+              "detail": "Versus, Arcade, Contrarreloj y Supervivencia están disponibles."
+            },
+            {
+              "label": "Entrenamiento",
+              "detail": "Se incluyen Entrenamiento libre, Tutorial, Entrenamiento de comandos y Entrenamiento de combos."
+            },
+            {
+              "label": "Progresión",
+              "detail": "El Modo Historia y DOA Quest ofrecen contenido estructurado para un jugador."
+            },
+            {
+              "label": "Online",
+              "detail": "Se admiten Ranked Match y Lobby Match."
+            },
+            {
+              "label": "DOA Central",
+              "detail": "Armario, Base de datos, Teatro, Música, Biblioteca y Modo Foto están disponibles desde el hub central."
+            },
+            {
+              "label": "Juego cruzado",
+              "detail": "No se admite juego cruzado entre plataformas y Dead or Alive 6 no puede jugar online con Dead or Alive 6 Last Round."
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Guía del Modo Foto de Dead or Alive 6 Last Round",
+          "description": "Crea retratos de personajes y escenas de acción con el nuevo Modo Foto. Esta guía explica el flujo oficial para elegir una escena, colocar a los luchadores, cambiar poses y expresiones y capturar la imagen final.",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Abre el Modo Foto y elige el escenario y los personajes de la escena."
+            },
+            {
+              "label": "2",
+              "detail": "Mueve, rota y coloca a cada personaje para construir la composición."
+            },
+            {
+              "label": "3",
+              "detail": "Selecciona habilidades o poses de los personajes para crear una toma de acción o un retrato preparado."
+            },
+            {
+              "label": "4",
+              "detail": "Ajusta expresiones faciales, sudor, suciedad y otros detalles visuales."
+            },
+            {
+              "label": "5",
+              "detail": "Captura la imagen final con la función de captura de pantalla de la plataforma seleccionada."
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Guía de transferencia de partidas de Dead or Alive 6 Last Round",
+          "description": "Mueve a Last Round el progreso, los objetos y los trajes compatibles de Dead or Alive 6 sin perder datos compatibles. Las instrucciones cubren el requisito de cuenta compartida, la preparación específica por plataforma, el mensaje de transferencia dentro del juego y restricciones importantes.",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Usa la misma cuenta de PlayStation Network, Xbox o Steam que posea los datos originales y el DLC compatible."
+            },
+            {
+              "label": "2",
+              "detail": "En PlayStation, actualiza la versión PS4 de Dead or Alive 6 a la versión 1.23, abre el juego y sube los datos de DLC desde el Menú principal."
+            },
+            {
+              "label": "3",
+              "detail": "En Xbox Series X|S o Steam, inicia Last Round con la misma cuenta para que se detecte automáticamente el DLC enlazado compatible."
+            },
+            {
+              "label": "4",
+              "detail": "Haz que la partida original sea accesible en la nueva consola o PC, inicia Last Round y selecciona Transferir cuando aparezca el mensaje en la pantalla de título."
+            },
+            {
+              "label": "5",
+              "detail": "Completa la importación antes de crear una partida nueva de Last Round; si ya existe una, debes eliminarla antes de poder transferir la antigua."
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Trajes y DLC de Dead or Alive 6 Last Round",
+          "description": "Descubre qué contenido cosmético nuevo se incluye y qué compras de Dead or Alive 6 se pueden transferir. La página también señala excepciones importantes relacionadas con trajes de colaboración, desbloqueos de personajes y Premium Tickets.",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Trajes nuevos",
+              "detail": "Last Round añade cinco trajes nuevos para Kasumi, Ayane, Marie Rose, Honoka y NiCO.",
+              "badge": "Nuevo"
+            },
+            {
+              "label": "Trajes antiguos",
+              "detail": "La mayoría de los trajes comprados previamente en Dead or Alive 6 se pueden transferir al usar la misma cuenta de plataforma."
+            },
+            {
+              "label": "Trajes de colaboración",
+              "detail": "Los trajes comprados previamente para Mai Shiranui y Kula Diamond no se pueden transferir."
+            },
+            {
+              "label": "Desbloqueos",
+              "detail": "Los desbloqueos de personajes adicionales de Dead or Alive 6 no se transfieren; la edición estándar incluye 29 luchadores, mientras que Mai Shiranui y Kula Diamond requieren llaves separadas."
+            },
+            {
+              "label": "Tickets",
+              "detail": "Los Premium Tickets de la versión PS4 de Dead or Alive 6 no se pueden usar en Last Round."
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Escenarios y Danger Zones de Dead or Alive 6 Last Round",
+          "description": "Aprende los peligros ambientales, las transiciones y los elementos destructibles presentes en las arenas de Last Round. La guía de escenarios destaca los lugares donde los fuegos artificiales, el público, las paredes, los vehículos, las cuerdas y los objetos rompibles pueden cambiar una partida.",
+          "href": "/features",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Oboro",
+              "detail": "Lost Paradise: Oboro es una versión mejorada del escenario tropical, actualizada con el nuevo sistema de iluminación de Oboro."
+            },
+            {
+              "label": "Festival",
+              "detail": "Los fuegos artificiales sin usar repartidos por el escenario del Festival chino pueden explotar al ser molestados."
+            },
+            {
+              "label": "Unforgettable",
+              "detail": "Una arena tipo galería que combina localizaciones memorables y Danger Zones funcionales de juegos anteriores de Dead or Alive."
+            },
+            {
+              "label": "Hidden Garden",
+              "detail": "Si derribas a un oponente a través de la colina cubierta de bambú, el combate se traslada al apartado Hidden Garden."
+            },
+            {
+              "label": "The Muscle",
+              "detail": "Una arena de lucha libre con pilares de fuego y cuerdas del ring cargadas de electricidad."
+            },
+            {
+              "label": "Coliseo",
+              "detail": "El escenario principal de artes marciales del torneo activa explosiones cuando los luchadores tocan las cuerdas del ring."
+            },
+            {
+              "label": "Rumble Danger",
+              "detail": "El público puede empujar hacia el ring a un luchador lanzado por el aire y dejarlo grogui."
+            },
+            {
+              "label": "Destrucción",
+              "detail": "Las cajas, jarrones y otros objetos del escenario pueden romperse para causar daño extra y no se regeneran."
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "description": "Respuestas rápidas a las preguntas más comunes sobre Dead or Alive 6 Last Round.",
+      "items": [
+        {
+          "question": "¿Qué es Dead or Alive 6 Last Round?",
+          "answer": "Dead or Alive 6 Last Round es la edición definitiva para la generación actual del juego de lucha 3D de Team NINJA para PS5, Xbox Series X|S y Steam. Se centra en el triángulo de golpe, lanzamiento y contra, los peligros de los escenarios, los ataques del Break Gauge y el Modo Foto."
+        },
+        {
+          "question": "¿Cuántos luchadores hay en Dead or Alive 6 Last Round?",
+          "answer": "Dead or Alive 6 Last Round incluye 29 luchadores jugables en la versión estándar, con la plantilla original ampliada por Nyotengu, Phase 4, Tamaki, Momiji y Rachel. Mai Shiranui y Kula Diamond se gestionan como desbloqueos de personajes de colaboración por separado."
+        },
+        {
+          "question": "¿Qué incluye Dead or Alive 6 Last Round Core Fighters?",
+          "answer": "Dead or Alive 6 Last Round Core Fighters parte de Kasumi, Marie Rose, Honoka y NiCO, además de modos como Versus, Arcade, Contrarreloj, Supervivencia, entrenamiento, Ranked Match, Lobby Match, DOA Central y Modo Foto. El Modo Historia y los luchadores adicionales requieren llaves de desbloqueo."
+        },
+        {
+          "question": "¿Dead or Alive 6 Last Round admite juego cruzado?",
+          "answer": "Dead or Alive 6 Last Round no admite juego cruzado entre plataformas diferentes. El juego online también está separado del Dead or Alive 6 original, por lo que las dos versiones no pueden emparejar entre sí online."
+        },
+        {
+          "question": "¿Las partidas y el DLC de Dead or Alive 6 se pueden transferir a Dead or Alive 6 Last Round?",
+          "answer": "Dead or Alive 6 Last Round puede importar el progreso, los objetos y los trajes compatibles cuando se usa la misma cuenta de plataforma. Algunos contenidos tienen excepciones, como los trajes de colaboración, los desbloqueos de personajes adicionales y los Premium Tickets de PS4."
+        },
+        {
+          "question": "¿Qué pueden hacer los jugadores en el Modo Foto de Dead or Alive 6 Last Round?",
+          "answer": "El Modo Foto de Dead or Alive 6 Last Round permite elegir escenarios y luchadores, mover y rotar personajes, establecer poses o habilidades, ajustar expresiones y detalles visuales y capturar la escena con la función de captura de la plataforma seleccionada."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Listo para dominar Dead or Alive 6 Last Round?",
+      "description": "Desde tu primer Hold de contraataque hasta la presión avanzada contra pared, enfrentamientos entre personajes, configuraciones del Modo Foto y notas de transferencia, esta wiki de la comunidad te ayuda a pasar menos tiempo buscando y más tiempo luchando.",
+      "primary": "Leer la guía de PS5/Xbox/Steam",
+      "secondary": "Jugar en Steam"
+    }
+  },
+  "guide": {
+    "overviewTitle": "Guía de Dead or Alive 6 Last Round",
+    "overviewDescription": "Empieza con consejos para principiantes, rutas de combos, frame data, notas de la guía de historia, ayuda para desbloquear trajes y fundamentos prácticos de combate."
+  },
+  "release": {
+    "overviewTitle": "Lanzamiento de Dead or Alive 6 Last Round",
+    "overviewDescription": "Sigue los detalles de la fecha de lanzamiento, precios, bonos de reserva, acceso a Core Fighters, reglas de DLC, notas de actualización gratuita e información de la edición física."
+  },
+  "platforms": {
+    "overviewTitle": "Plataformas de Dead or Alive 6 Last Round",
+    "overviewDescription": "Compara la cobertura de PS5, Xbox, Steam, PC, Nintendo Switch y Steam Deck para Dead or Alive 6 Last Round."
+  },
+  "characters": {
+    "overviewTitle": "Personajes de Dead or Alive 6 Last Round",
+    "overviewDescription": "Explora listas de plantilla, nuevos luchadores, orientación de tier list, personajes de colaboración y referencias de actores de voz."
+  },
+  "features": {
+    "overviewTitle": "Características de Dead or Alive 6 Last Round",
+    "overviewDescription": "Revisa el estado del juego cruzado, la discusión sobre rollback, los cambios en el gameplay y las funciones del Modo Foto en la edición Last Round."
+  },
+  "media": {
+    "overviewTitle": "Multimedia de Dead or Alive 6 Last Round",
+    "overviewDescription": "Mira cobertura de tráilers, análisis de gameplay, notas del Modo Historia, comparaciones gráficas y muestras de trajes."
+  },
+  "reviews": {
+    "overviewTitle": "Análisis de Dead or Alive 6 Last Round",
+    "overviewDescription": "Lee análisis, comparativas entre versiones y consejos de compra para decidir si Dead or Alive 6 Last Round merece la pena."
+  },
+  "community": {
+    "overviewTitle": "Comunidad de Dead or Alive 6 Last Round",
+    "overviewDescription": "Sigue las discusiones de la comunidad, las últimas noticias, la actividad en Reddit y el interés en Steam Charts en torno a Dead or Alive 6 Last Round."
+  },
+  "shared": {
+    "wikiNavigation": "Navegación del wiki",
+    "activeCodes": "Estado de la guía",
+    "updated": "Actualizado",
+    "viewAllCodes": "Ver índice de guías",
+    "inThisSection": "En esta sección",
+    "tableOfContents": "Tabla de contenidos",
+    "nextSteps": "Siguientes pasos",
+    "needHelp": "¿Necesitas ayuda?",
+    "relatedReading": "Lectura relacionada",
+    "relatedGuides": "Guías relacionadas",
+    "readMore": "Leer más",
+    "officialMedia": "Medios oficiales",
+    "home": "Inicio",
+    "noGuidesAvailable": "Aún no hay guías disponibles. ¡Vuelve pronto!",
+    "guideStatusDesc": "Dead or Alive 6 Last Round no tiene actualmente ningún sistema de códigos de canje.",
+    "playOnSteam": "Jugar en Steam"
+  },
+  "footer": {
+    "aboutTitle": "Wiki de Dead or Alive 6 Last Round",
+    "about": "La Wiki de Dead or Alive 6 Last Round es un centro de guías independiente hecho por fans, dedicado a luchadores, combos, escenarios, controles, Modo Foto, desbloqueos y ayuda con Core Fighters. No está afiliada con Team NINJA ni con KOEI TECMO GAMES.",
+    "quickLinks": "Enlaces rápidos",
+    "guides": "Guías",
+    "legal": "Legal",
+    "copyright": "2026 Dead or Alive 6 Last Round Wiki. No afiliada con Team NINJA ni con KOEI TECMO GAMES.",
+    "description": "Luchador 3D de la generación actual en PS5, Xbox Series X|S y Steam con 29 luchadores, 13 escenarios, Modo Foto y Core Fighters.",
+    "playGame": "Jugar en Steam",
+    "officialDiscord": "Discord global de KOEI TECMO",
+    "officialYoutube": "YouTube de KOEI TECMO AMERICA",
+    "beginnerGuide": "Guía",
+    "raceGuides": "Personajes",
+    "bossGuides": "Plataformas",
+    "buildGuide": "Lanzamiento",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "communityHub": "Centro de la comunidad de Steam"
+  }
+}

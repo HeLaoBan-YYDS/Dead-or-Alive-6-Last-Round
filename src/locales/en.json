@@ -14,7 +14,9 @@
     "features": "Features",
     "media": "Media",
     "reviews": "Reviews",
-    "community": "Community"
+    "community": "Community",
+    "toggleTheme": "Toggle theme",
+    "menu": "Menu"
   },
   "home": {
     "meta": {
@@ -502,6 +504,7 @@
     "officialMedia": "Official media",
     "home": "Home",
     "noGuidesAvailable": "No guides available yet. Check back soon!",
+    "guideStatusDesc": "No Dead or Alive 6 Last Round redemption code system is currently available.",
     "playOnSteam": "Play on Steam"
   },
   "footer": {

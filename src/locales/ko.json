@@ -1,1 +1,529 @@
-{}
+{
+  "site": {
+    "name": "데드 오어 얼라이브 6 라스트 라운드 Wiki",
+    "shortName": "DOA6 라스트 라운드 Wiki",
+    "tagline": "팬이 만든 격투 게임 Wiki",
+    "description": "PS5, Xbox Series X|S, Steam용 DEAD OR ALIVE 6 Last Round의 비공식 팬 가이드 허브. 파이터, 콤보, 스테이지, 조작, 포토 모드, 언락, Core Fighters까지 다룹니다.",
+    "legalNotice": "비공식 팬 Wiki. Team NINJA 및 KOEI TECMO GAMES와 무관합니다."
+  },
+  "nav": {
+    "guide": "가이드",
+    "release": "출시",
+    "platforms": "플랫폼",
+    "characters": "캐릭터",
+    "features": "기능",
+    "media": "미디어",
+    "reviews": "리뷰",
+    "community": "커뮤니티",
+    "toggleTheme": "테마 전환",
+    "menu": "메뉴"
+  },
+  "home": {
+    "meta": {
+      "title": "데드 오어 얼라이브 6 라스트 라운드 Wiki - 파이터 & 가이드",
+      "description": "데드 오어 얼라이브 6 라스트 라운드를 파이터 가이드, 티어 리스트, 콤보, 조작, 포토 모드 팁, 언락, 스테이지, Core Fighters 가이드로 마스터하세요."
+    },
+    "hero": {
+      "eyebrow": "독립 팬 제작 격투 게임 Wiki",
+      "title": "데드 오어 얼라이브 6 라스트 라운드 Wiki",
+      "description": "Team NINJA의 빠르고 전술적인 3D 격투를 PS5, Xbox Series X|S, Steam에서 만나보세요. 타격-잡기-홀드의 트라이앵글, 29명의 파이터, 스테이지 위험 요소, 포토 모드를 배워봅시다.",
+      "stats": [
+        "2026년 6월 25일 출시",
+        "29명의 플레이어블 파이터",
+        "13개의 배틀 스테이지",
+        "4명의 Core Fighters",
+        "37개의 Steam 도전과제"
+      ],
+      "primaryCta": "PS5/Xbox/Steam 가이드 시작",
+      "secondaryCta": "파이터 비교",
+      "tertiaryCta": "Core Fighters 체험",
+      "videoLabel": "공식 발표 트레일러"
+    },
+    "updates": {
+      "title": "최신 업데이트",
+      "browse": "모든 가이드 보기",
+      "viewAll": "모두 보기"
+    },
+    "start": {
+      "eyebrow": "시작하기",
+      "title": "데드 오어 얼라이브 6 라스트 라운드 여정",
+      "cards": [
+        {
+          "number": "1",
+          "title": "초보자 가이드",
+          "description": "이동, 가드, 타격-잡기-홀드 트라이앵글, 브레이크 게이지의 기본, 그리고 첫 매치 전에 바꿔야 할 설정을 배워봅시다."
+        },
+        {
+          "number": "2",
+          "title": "전투 시스템",
+          "description": "홀드, 잡기, Fatal Rush, Break Blow, 벽 압박, Danger Zone을 이해하고 무작정 버튼 누르기를 멈추고 의도적인 선택을 시작하세요."
+        },
+        {
+          "number": "3",
+          "title": "파이터와 콤보",
+          "description": "29명의 파이터를 플레이 스타일, 난이도, 속도, 사거리, 초보자 가치로 비교하고, 실전에서 쓸 수 있는 런처, 잼, punish 콤보를 익혀봅시다."
+        },
+        {
+          "number": "4",
+          "title": "포토 모드와 데이터 이전",
+          "description": "포토 모드에서 포즈, 표정, 카메라 앵글, 땀, 때를 설정하고, 플랫폼별 절차에 따라 호환되는 DOA6 세이브와 의상을 옮겨봅시다."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "인기 페이지",
+      "title": "지금 인기",
+      "quickLinks": [
+        "초보자 가이드",
+        "파이터 로스터",
+        "Core Fighters",
+        "포토 모드"
+      ],
+      "cards": [
+        {
+          "badge": "초보자",
+          "title": "초보자 가이드",
+          "description": "트라이앵글 시스템, 브레이크 게이지, 수비용 홀드, 그리고 실전 첫 매치에 유용한 습관을 배웁니다.",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide"
+        },
+        {
+          "badge": "로스터",
+          "title": "캐릭터",
+          "description": "29명 표준 로스터, 복귀 보너스 파이터, 별도 판매되는 콜라보 파이터를 비교합니다.",
+          "href": "/characters"
+        },
+        {
+          "badge": "무료",
+          "title": "Core Fighters",
+          "description": "무료 Core Fighters 에디션에 무엇이 포함되는지 확인하고 어떤 언록 키를 살지 결정하세요.",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters"
+        },
+        {
+          "badge": "시스템",
+          "title": "모드와 크로스플레이",
+          "description": "오프라인 모드, 트레이닝 도구, 온라인 플레이, DOA Central, 그리고 플랫폼 매칭 제한을 확인합니다.",
+          "href": "/features/dead-or-alive-6-last-round-crossplay"
+        },
+        {
+          "badge": "가이드",
+          "title": "포토 모드 가이드",
+          "description": "캐릭터 배치, 포즈, 표정, 카메라, 비주얼 옵션으로 인물 사진과 액션 장면을 만듭니다.",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode"
+        },
+        {
+          "badge": "이전",
+          "title": "세이브 이전 가이드",
+          "description": "DEAD OR ALIVE 6의 호환 진행도, 보유 아이템, 의상을 라스트 라운드로 옮깁니다.",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over"
+        },
+        {
+          "badge": "DLC",
+          "title": "의상과 DLC",
+          "description": "신규 의상, 이전 규칙, 콜라보 예외, 프리미엄 티켓 제한을 살펴봅니다.",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc"
+        },
+        {
+          "badge": "스테이지",
+          "title": "스테이지와 Danger Zone",
+          "description": "벽, 로프, 폭죽, 관중, 차량, 파괴 가능 오브젝트가 매치를 어떻게 바꾸는지 배웁니다.",
+          "href": "/features"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "데드 오어 얼라이브 6 라스트 라운드란?",
+      "paragraphs": [
+        "데드 오어 얼라이브 6 라스트 라운드는 Team NINJA의 빠른 3D 격투 게임의 현세대 최종판입니다. 타격-잡기-홀드의 전술적 트라이앵글, 폭발적인 스테이지 위험 요소, 시네마틱 브레이크 게이지 공격이 핵심입니다.",
+        "라스트 라운드 에디션은 29명의 플레이어블 파이터, 다섯 개의 신규 의상, 현세대 최적화, 유연한 포토 모드를 갖추고 출시됩니다. 무료 Core Fighters 에디션은 네 명의 시작 캐릭터로 대부분의 모드를 열어주고, 풀 에디션은 메인 로스터와 스토리 언록을 포함합니다."
+      ],
+      "stats": [
+        {
+          "label": "개발사",
+          "value": "Team NINJA"
+        },
+        {
+          "label": "플랫폼",
+          "value": "PS5 / Xbox Series X|S / Steam"
+        },
+        {
+          "label": "장르",
+          "value": "3D 격투 액션"
+        },
+        {
+          "label": "플레이어블 파이터",
+          "value": "29"
+        },
+        {
+          "label": "배틀 스테이지",
+          "value": "13"
+        },
+        {
+          "label": "무료 Core Fighters",
+          "value": "4"
+        },
+        {
+          "label": "Steam 도전과제",
+          "value": "37"
+        }
+      ],
+      "cta": "모든 가이드 살펴보기"
+    },
+    "explore": {
+      "title": "데드 오어 얼라이브 6 라스트 라운드 가이드 모듈",
+      "description": "캐릭터 목록, 초보자 시스템, Core Fighters 상세, 포토 모드 절차, 세이브 이전 안내, DLC 규칙, 스테이지 위험 요소 가이드로 바로 이동합니다.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 캐릭터",
+          "description": "플레이어블 로스터 전체를 살펴보고 풀 버전의 파이터 구성을 확인하세요. 본 페이지는 오리지널 24명 라인과 다섯 명의 복귀 보너스 파이터, 별도 판매 콜라보 파이터를 구분해 보여줍니다.",
+          "href": "/characters",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "풀 로스터",
+              "detail": "표준 버전에는 29명의 플레이어블 캐릭터가 포함됩니다."
+            },
+            {
+              "label": "오리지널 파이터",
+              "detail": "카스미, 마리 로즈, 호노카, 니코, 헬레나, 하야테, 하야부사, 잔 리, 잭, 디에고, 리그, 히토미, 레이팡, 아야네, 베이맨, 바스, 티나, 밀라, 크리스티, 코코로, 라 마리포사, 브래드 웡, 엘리엇, 라이도우."
+            },
+            {
+              "label": "보너스 파이터",
+              "detail": "뇨텐구, 페이즈 4, 타마키, 모미지, 레이첼이 오리지널 24명에 추가됩니다."
+            },
+            {
+              "label": "콜라보 파이터",
+              "detail": "마이 시라누이와 쿨라 다이아몬드는 별도이며, 각자의 캐릭터 언록 키가 필요합니다."
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 초보자 가이드",
+          "description": "DEAD OR ALIVE가 다른 3D 격투와 무엇이 다른지를 결정하는 핵심 시스템을 배워봅니다. 본 가이드는 트라이앵글 시스템, Fatal Rush, 브레이크 게이지, 수비용 홀드, 스테이지 위험 요소를 실전 순서로 다룹니다.",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "튜토리얼과 자유 훈련으로 이동, 가드, 타격, 잡기, 홀드를 배워봅시다."
+            },
+            {
+              "label": "2",
+              "detail": "트라이앵글 시스템을 외웁니다: 타격은 잡기에, 잡기는 홀드에, 홀드는 타격에 이깁니다."
+            },
+            {
+              "label": "3",
+              "detail": "최대 4히트의 Fatal Rush를 연습해 초보자도 손쉬운 공세 시퀀스를 익혀봅시다."
+            },
+            {
+              "label": "4",
+              "detail": "전투에서 브레이크 게이지를 쌓고 50%로 Break Hold, 100%로 Break Blow를 사용합니다."
+            },
+            {
+              "label": "5",
+              "detail": "벽, 관중, 파괴 가능 오브젝트, Danger Zone을 활용해 대미지를 늘리고 유리한 상황을 만듭니다."
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 Core Fighters",
+          "description": "다운로드 전에 무료 Core Fighters 에디션과 유료 표준 버전을 비교합니다. 무료 로스터, 포함 모드, 언록 조건, 풀 게임을 구매하지 않고도 쓸 수 있는 기능을 설명합니다.",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "무료 파이터",
+              "detail": "카스미, 마리 로즈, 호노카, 니코가 처음부터 플레이 가능합니다.",
+              "badge": "무료"
+            },
+            {
+              "label": "모드",
+              "detail": "Core Fighters에는 VS, 아케이드, 타임 어택, 서바이벌, 훈련 모드, 랭크 매치, 로비 매치, DOA Central, 포토 모드가 포함됩니다."
+            },
+            {
+              "label": "스토리",
+              "detail": "스토리 모드는 스토리 언록 키를 구매하지 않으면 제외됩니다."
+            },
+            {
+              "label": "언록 키",
+              "detail": "Core Fighters에서 처음 4인 외의 캐릭터를 쓰려면 별도의 캐릭터 언록 키가 필요합니다."
+            },
+            {
+              "label": "풀 버전",
+              "detail": "유료 표준 버전은 29명 로스터에 대한 스토리 언록 키와 캐릭터 언록 키를 포함합니다."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 모드와 크로스플레이",
+          "description": "라스트 라운드에 포함된 모든 주요 오프라인, 트레이닝, 커스터마이즈, 온라인 모드를 확인합니다. 또한 크로스 플랫폼 제한도 명확히 하여 누구와 매칭 가능한지 알 수 있습니다.",
+          "href": "/features/dead-or-alive-6-last-round-crossplay",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "오프라인",
+              "detail": "VS, 아케이드, 타임 어택, 서바이벌을 이용할 수 있습니다."
+            },
+            {
+              "label": "트레이닝",
+              "detail": "자유 훈련, 튜토리얼, 커맨드 트레이닝, 콤보 트레이닝이 포함됩니다."
+            },
+            {
+              "label": "진행",
+              "detail": "스토리 모드와 DOA Quest가 구조화된 싱글 플레이어 콘텐츠를 제공합니다."
+            },
+            {
+              "label": "온라인",
+              "detail": "랭크 매치와 로비 매치를 지원합니다."
+            },
+            {
+              "label": "DOA Central",
+              "detail": "중앙 허브에서 옷장, 데이터베이스, 시어터, 음악, 라이브러리, 포토 모드를 제공합니다."
+            },
+            {
+              "label": "크로스플레이",
+              "detail": "플랫폼 간 크로스플레이는 지원되지 않으며, DEAD OR ALIVE 6와 DEAD OR ALIVE 6 라스트 라운드는 온라인으로 함께 플레이할 수 없습니다."
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 포토 모드 가이드",
+          "description": "새 포토 모드에서 캐릭터 인물 사진과 액션 장면을 만들어보세요. 장면 선택, 파이터 배치, 포즈/표정 변경, 최종 이미지 캡처까지의 공식 워크플로를 설명합니다.",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "포토 모드를 열고 장면의 스테이지와 캐릭터를 선택합니다."
+            },
+            {
+              "label": "2",
+              "detail": "각 캐릭터를 이동, 회전, 배치하여 구도를 만듭니다."
+            },
+            {
+              "label": "3",
+              "detail": "액션 샷 또는 연출된 인물 사진을 위해 캐릭터 스킬이나 포즈를 선택합니다."
+            },
+            {
+              "label": "4",
+              "detail": "표정, 땀, 때 등 비주얼 디테일을 조정합니다."
+            },
+            {
+              "label": "5",
+              "detail": "선택한 플랫폼의 스크린샷 기능으로 최종 이미지를 캡처합니다."
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 세이브 이전 가이드",
+          "description": "DEAD OR ALIVE 6의 호환 진행도, 보유 아이템, 의상을 데이터를 잃지 않고 라스트 라운드로 옮기세요. 공용 계정 요구사항, 플랫폼별 준비, 인게임 이전 프롬프트, 주요 제한을 다룹니다.",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "원래 세이브 데이터와 호환 DLC를 소유한 PlayStation Network, Xbox, Steam 계정을 그대로 사용합니다."
+            },
+            {
+              "label": "2",
+              "detail": "PlayStation에서는 PS4 버전 DEAD OR ALIVE 6를 버전 1.23으로 업데이트하고, 게임을 열어 메인 메뉴에서 DLC 데이터를 업로드합니다."
+            },
+            {
+              "label": "3",
+              "detail": "Xbox Series X|S 또는 Steam에서는 같은 계정으로 라스트 라운드를 시작해 호환 DLC가 자동 감지되도록 합니다."
+            },
+            {
+              "label": "4",
+              "detail": "원래 세이브를 새 콘솔 또는 PC에서 접근 가능하게 만든 뒤, 라스트 라운드를 실행하고 타이틀 화면에서 이전 안내가 나오면 Transfer를 선택합니다."
+            },
+            {
+              "label": "5",
+              "detail": "라스트 라운드 세이브를 새로 만들기 전에 가져오기를 완료하세요. 기존 라스트 라운드 세이브가 있으면 삭제한 후에야 이전할 수 있습니다."
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 의상과 DLC",
+          "description": "새로 포함된 코스메틱 콘텐츠와 DEAD OR ALIVE 6에서 가져올 수 있는 구매 내역을 확인합니다. 또한 콜라보 의상, 캐릭터 언록, 프리미엄 티켓 관련 주요 예외도 정리합니다.",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "신규 의상",
+              "detail": "라스트 라운드는 카스미, 아야네, 마리 로즈, 호노카, 니코의 다섯 가지 신규 의상을 추가합니다.",
+              "badge": "신규"
+            },
+            {
+              "label": "기존 의상",
+              "detail": "같은 플랫폼 계정을 사용하면 이전에 구매한 DEAD OR ALIVE 6 의상 대부분을 가져올 수 있습니다."
+            },
+            {
+              "label": "콜라보 의상",
+              "detail": "마이 시라누이와 쿨라 다이아몬드의 기존 의상은 이전할 수 없습니다."
+            },
+            {
+              "label": "언록",
+              "detail": "DEAD OR ALIVE 6의 추가 캐릭터 언록은 이전되지 않으며, 표준 버전은 29명 파이터를 포함하고 마이 시라누이와 쿨라 다이아몬드는 별도 키가 필요합니다."
+            },
+            {
+              "label": "티켓",
+              "detail": "PS4 버전 DEAD OR ALIVE 6의 프리미엄 티켓은 라스트 라운드에서 사용할 수 없습니다."
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "데드 오어 얼라이브 6 라스트 라운드 스테이지와 Danger Zone",
+          "description": "라스트 라운드 아레나에 존재하는 환경 위험, 전환, 파괴 가능 요소를 배웁니다. 폭죽, 관중, 벽, 차량, 로프, 파괴 오브젝트가 매치를 바꾸는 스테이지를 짚어봅니다.",
+          "href": "/features",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "오보로",
+              "detail": "Lost Paradise: 오보로는 새로운 오보로 라이팅 시스템으로 강화된 트로피컬 스테이지의 업그레이드 버전입니다."
+            },
+            {
+              "label": "페스티벌",
+              "detail": "Chinese Festival 스테이지에 흩어진 미사용 폭죽은 건드리면 폭발합니다."
+            },
+            {
+              "label": "Unforgettable",
+              "detail": "DEAD OR ALIVE 시리즈의 인상적인 장소와 작동하는 Danger Zone을 결합한 갤러리형 아레나."
+            },
+            {
+              "label": "Hidden Garden",
+              "detail": "대나무로 덮인 언덕 너머로 상대를 내리치면 전투가 인적 없는 Hidden Garden으로 전환됩니다."
+            },
+            {
+              "label": "The Muscle",
+              "detail": "불기둥과 대전된 링 로프가 특징인 레슬링 아레나."
+            },
+            {
+              "label": "콜로세움",
+              "detail": "대회의 메인 무술 스테이지. 파이터가 링 로프에 닿으면 폭발이 발생합니다."
+            },
+            {
+              "label": "Rumble Danger",
+              "detail": "관중이 띄워진 파이터를 아레나 안쪽으로 밀어 넣어 그로기 상태로 만듭니다."
+            },
+            {
+              "label": "파괴",
+              "detail": "상자, 항아리 등 스테이지 오브젝트는 부수면 추가 대미지를 주며 재생되지 않습니다."
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "description": "데드 오어 얼라이브 6 라스트 라운드에 대한 가장 흔한 질문에 대한 빠른 답변.",
+      "items": [
+        {
+          "question": "데드 오어 얼라이브 6 라스트 라운드란 무엇인가요?",
+          "answer": "데드 오어 얼라이브 6 라스트 라운드는 PS5, Xbox Series X|S, Steam용 Team NINJA의 3D 격투 게임의 현세대 최종판입니다. 타격-잡기-홀드 트라이앵글, 스테이지 위험 요소, 브레이크 게이지 공격, 포토 모드를 중심으로 합니다."
+        },
+        {
+          "question": "데드 오어 얼라이브 6 라스트 라운드에는 파이터가 몇 명인가요?",
+          "answer": "데드 오어 얼라이브 6 라스트 라운드는 표준 버전에서 29명의 플레이어블 파이터를 제공하며, 오리지널 로스터에 뇨텐구, 페이즈 4, 타마키, 모미지, 레이첼이 추가됩니다. 마이 시라누이와 쿨라 다이아몬드는 별도의 콜라보 파이터 언록으로 처리됩니다."
+        },
+        {
+          "question": "데드 오어 얼라이브 6 라스트 라운드 Core Fighters에는 무엇이 포함되나요?",
+          "answer": "데드 오어 얼라이브 6 라스트 라운드 Core Fighters는 카스미, 마리 로즈, 호노카, 니코 네 명으로 시작하며, VS, 아케이드, 타임 어택, 서바이벌, 트레이닝, 랭크 매치, 로비 매치, DOA Central, 포토 모드를 제공합니다. 스토리 모드와 추가 파이터는 언록 키가 필요합니다."
+        },
+        {
+          "question": "데드 오어 얼라이브 6 라스트 라운드는 크로스플레이를 지원하나요?",
+          "answer": "데드 오어 얼라이브 6 라스트 라운드는 플랫폼 간 크로스플레이를 지원하지 않습니다. 온라인 플레이는 원래의 DEAD OR ALIVE 6와도 분리되어 있어 두 버전이 서로 온라인으로 매칭될 수 없습니다."
+        },
+        {
+          "question": "DEAD OR ALIVE 6 세이브와 DLC를 데드 오어 얼라이브 6 라스트 라운드로 이전할 수 있나요?",
+          "answer": "같은 플랫폼 계정을 사용할 때 데드 오어 얼라이브 6 라스트 라운드는 호환 진행도, 보유 아이템, 지원 의상을 가져올 수 있습니다. 콜라보 의상, 추가 캐릭터 언록, PS4 프리미엄 티켓 등 일부 콘텐츠에는 예외가 있습니다."
+        },
+        {
+          "question": "데드 오어 얼라이브 6 라스트 라운드 포토 모드에서는 무엇을 할 수 있나요?",
+          "answer": "데드 오어 얼라이브 6 라스트 라운드 포토 모드에서는 스테이지와 파이터를 고르고, 캐릭터를 이동/회전하며, 포즈나 스킬을 설정하고, 표정과 비주얼을 조정한 뒤, 선택한 플랫폼의 스크린샷 기능으로 장면을 캡처할 수 있습니다."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "데드 오어 얼라이브 6 라스트 라운드를 마스터할 준비가 되셨나요?",
+      "description": "첫 카운터 홀드부터 고급 벽 압박, 캐릭터 매치업, 포토 모드 설정, 세이브 이전까지, 이 커뮤니티 Wiki는 검색 시간을 줄이고 플레이 시간을 늘리는 데 도움을 줍니다.",
+      "primary": "PS5/Xbox/Steam 가이드 읽기",
+      "secondary": "Steam에서 플레이"
+    }
+  },
+  "guide": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 가이드",
+    "overviewDescription": "초보자 팁, 콤보 루트, 프레임 데이터, 스토리 공략 메모, 의상 언록 도움, 그리고 실용적인 격투 기본기부터 시작하세요."
+  },
+  "release": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 출시",
+    "overviewDescription": "출시일, 가격, 사전 예약 보너스, Core Fighters 접근, DLC 규칙, 무료 업그레이드 노트, 물리적 패키지 정보를 확인하세요."
+  },
+  "platforms": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 플랫폼",
+    "overviewDescription": "데드 오어 얼라이브 6 라스트 라운드의 PS5, Xbox, Steam, PC, Nintendo Switch, Steam Deck 지원을 비교합니다."
+  },
+  "characters": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 캐릭터",
+    "overviewDescription": "로스터 목록, 신규 파이터, 티어 리스트 가이드, 콜라보 캐릭터, 성우 레퍼런스를 살펴보세요."
+  },
+  "features": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 기능",
+    "overviewDescription": "라스트 라운드 에디션의 크로스플레이 현황, 롤백 논의, 게임플레이 변화, 포토 모드 기능을 확인합니다."
+  },
+  "media": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 미디어",
+    "overviewDescription": "트레일러, 게임플레이 분석, 스토리 모드 노트, 그래픽 비교, 의상 쇼케이스를 시청하세요."
+  },
+  "reviews": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 리뷰",
+    "overviewDescription": "리뷰, 버전 비교, 그리고 데드 오어 얼라이브 6 라스트 라운드의 가치 평가 가이드를 읽어보세요."
+  },
+  "community": {
+    "overviewTitle": "데드 오어 얼라이브 6 라스트 라운드 커뮤니티",
+    "overviewDescription": "커뮤니티 토론, 최신 뉴스, Reddit 활동, Steam Charts에서의 데드 오어 얼라이브 6 라스트 라운드 관심을 팔로우합니다."
+  },
+  "shared": {
+    "wikiNavigation": "Wiki 탐색",
+    "activeCodes": "가이드 상태",
+    "updated": "업데이트",
+    "viewAllCodes": "가이드 인덱스 보기",
+    "inThisSection": "이 섹션의 내용",
+    "tableOfContents": "목차",
+    "nextSteps": "다음 단계",
+    "needHelp": "도움이 필요하신가요?",
+    "relatedReading": "관련 글",
+    "relatedGuides": "관련 가이드",
+    "readMore": "자세히 보기",
+    "officialMedia": "공식 미디어",
+    "home": "홈",
+    "noGuidesAvailable": "아직 등록된 가이드가 없습니다. 곧 다시 확인해 주세요!",
+    "guideStatusDesc": "데드 오어 얼라이브 6 라스트 라운드에는 현재 사용 가능한 코드 시스템이 없습니다.",
+    "playOnSteam": "Steam에서 플레이"
+  },
+  "footer": {
+    "aboutTitle": "데드 오어 얼라이브 6 라스트 라운드 Wiki",
+    "about": "데드 오어 얼라이브 6 라스트 라운드 Wiki는 파이터, 콤보, 스테이지, 조작, 포토 모드, 언록, Core Fighters를 다루는 독립 팬 가이드 허브입니다. Team NINJA 및 KOEI TECMO GAMES와는 무관합니다.",
+    "quickLinks": "빠른 링크",
+    "guides": "가이드",
+    "legal": "법적 고지",
+    "copyright": "2026 Dead or Alive 6 Last Round Wiki. Team NINJA 및 KOEI TECMO GAMES와 무관합니다.",
+    "description": "PS5, Xbox Series X|S, Steam용 현세대 3D 격투. 29명 파이터, 13개 스테이지, 포토 모드, Core Fighters를 제공합니다.",
+    "playGame": "Steam에서 플레이",
+    "officialDiscord": "KOEI TECMO Global Discord",
+    "officialYoutube": "KOEI TECMO AMERICA YouTube",
+    "beginnerGuide": "가이드",
+    "raceGuides": "캐릭터",
+    "bossGuides": "플랫폼",
+    "buildGuide": "출시",
+    "privacyPolicy": "개인정보 보호정책",
+    "termsOfService": "이용약관",
+    "communityHub": "Steam 커뮤니티 허브"
+  }
+}

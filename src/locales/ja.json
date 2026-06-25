@@ -1,1 +1,529 @@
-{}
+{
+  "site": {
+    "name": "デッドオアアライブ 6 ラストラウンド Wiki",
+    "shortName": "DOA6 ラストラウンド Wiki",
+    "tagline": "ファン制作の格闘ゲーム Wiki",
+    "description": "PS5、Xbox Series X|S、Steam 対応の DEAD OR ALIVE 6 Last Round 攻略情報サイト。ファイター、コンボ、ステージ、操作、写真モード、解放要素、Core Fighters まで網羅した非公式ファン Wiki。",
+    "legalNotice": "非公式ファン Wiki。Team NINJA および KOEI TECMO GAMES とは関係ありません。"
+  },
+  "nav": {
+    "guide": "ガイド",
+    "release": "発売情報",
+    "platforms": "プラットフォーム",
+    "characters": "キャラクター",
+    "features": "機能",
+    "media": "メディア",
+    "reviews": "レビュー",
+    "community": "コミュニティ",
+    "toggleTheme": "テーマ切替",
+    "menu": "メニュー"
+  },
+  "home": {
+    "meta": {
+      "title": "デッドオアアライブ 6 ラストラウンド Wiki - ファイター＆攻略",
+      "description": "デッドオアアライブ 6 ラストラウンドを、ファイターガイド、 tier リスト、コンボ、操作、写真モードのヒント、解放要素、ステージ、Core Fighters 攻略で極めよう。"
+    },
+    "hero": {
+      "eyebrow": "非公式ファン制作の格闘ゲーム Wiki",
+      "title": "デッドオアアライブ 6 ラストラウンド Wiki",
+      "description": "Team NINJA が贈る高速でテクニカルな 3D 格闘を PS5、Xbox Series X|S、Steam で。 打・投・捌き のトライアングル、29 人のファイター、ステージギミック、写真モードを学ぼう。",
+      "stats": [
+        "2026 年 6 月 25 日発売",
+        "29 人の使用可能ファイター",
+        "13 のバトルステージ",
+        "4 人の Core Fighters",
+        "37 個の Steam 実績"
+      ],
+      "primaryCta": "PS5 / Xbox / Steam 攻略を始める",
+      "secondaryCta": "ファイターを比較",
+      "tertiaryCta": "Core Fighters を試す",
+      "videoLabel": "公式アナウンストレーラー"
+    },
+    "updates": {
+      "title": "最新情報",
+      "browse": "すべての攻略を見る",
+      "viewAll": "すべて表示"
+    },
+    "start": {
+      "eyebrow": "はじめに",
+      "title": "デッドオアアライブ 6 ラストラウンドを始めよう",
+      "cards": [
+        {
+          "number": "1",
+          "title": "初心者ガイド",
+          "description": "移動、防御、打・投・捌きのトライアングル、ブレイクゲージの基本、そして初戦の前に設定すべき項目を学ぼう。"
+        },
+        {
+          "number": "2",
+          "title": "戦闘システム",
+          "description": "ホールド、投げ、Fatal Rush、Break Blow、壁の圧力、Danger Zone を理解し、ボタン連打から卒業しよう。"
+        },
+        {
+          "number": "3",
+          "title": "ファイターとコンボ",
+          "description": "29 人のファイターをプレイスタイル、難易度、速度、射程、初心者向けの価値で比較し、実用的なランチャー、連続技、確定反撃コンボを学ぼう。"
+        },
+        {
+          "number": "4",
+          "title": "写真モードとデータ移行",
+          "description": "写真モードでポーズ、表情、カメラアングル、汗、汚れを設定し、プラットフォームごとの手順で DOA6 のセーブデータやコスチュームを移行しよう。"
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "人気のページ",
+      "title": "トレンド",
+      "quickLinks": [
+        "初心者ガイド",
+        "ファイターロスター",
+        "Core Fighters",
+        "写真モード"
+      ],
+      "cards": [
+        {
+          "badge": "初心者",
+          "title": "初心者ガイド",
+          "description": "トライアングルシステム、ブレイクゲージ、守りのホールド、そして初戦で使える実践的な癖を学ぼう。",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide"
+        },
+        {
+          "badge": "ロスター",
+          "title": "キャラクター",
+          "description": "29 人の標準ロスター、追加ボーナスファイター、そして別売りのコラボファイターを比較。",
+          "href": "/characters"
+        },
+        {
+          "badge": "無料",
+          "title": "Core Fighters",
+          "description": "無料版の Core Fighters で何ができるかを確認してから、追加アンロッキーを購入しよう。",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters"
+        },
+        {
+          "badge": "システム",
+          "title": "モードとクロスプレイ",
+          "description": "オフラインモード、トレーニング、オンラインプレイ、DOA Central、そしてプラットフォームマッチの制限を確認。",
+          "href": "/features/dead-or-alive-6-last-round-crossplay"
+        },
+        {
+          "badge": "ガイド",
+          "title": "写真モードガイド",
+          "description": "キャラクター配置、ポーズ、表情、カメラ、ビジュアルオプションでポートレートやアクションシーンを撮影。",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode"
+        },
+        {
+          "badge": "移行",
+          "title": "セーブデータ移行ガイド",
+          "description": "DEAD OR ALIVE 6 の対応する進行状況、所持アイテム、コスチュームをラストラウンドへ移行。",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over"
+        },
+        {
+          "badge": "DLC",
+          "title": "コスチュームと DLC",
+          "description": "新しいコスチューム、移行ルール、コラボレーションの例外、プレミアムチケットの制限を確認。",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc"
+        },
+        {
+          "badge": "ステージ",
+          "title": "ステージと Danger Zone",
+          "description": "壁、ロープ、花火、観衆、車両、破壊可能オブジェクトが試合をどう変えるかを学ぼう。",
+          "href": "/features"
+        }
+      ]
+    },
+    "aboutGame": {
+      "title": "デッドオアアライブ 6 ラストラウンドとは？",
+      "paragraphs": [
+        "デッドオアアライブ 6 ラストラウンドは、Team NINJA の高速 3D 格闘ゲームの現世代向け決定版です。打・投・捌き の戦術的トライアングル、爆発的なステージギミック、シネマティックな Break Gauge 攻撃が核となります。",
+        "ラストラウンド版は 29 人の使用可能ファイター、5 つの新しいコスチューム、現世代最適化、柔軟な写真モードを搭載して発売されます。無料版 Core Fighters は 4 人の初期キャラクターでほとんどのモードを解放し、完全版はメインロスターとストーリーアンロックを含みます。"
+      ],
+      "stats": [
+        {
+          "label": "開発",
+          "value": "Team NINJA"
+        },
+        {
+          "label": "プラットフォーム",
+          "value": "PS5 / Xbox Series X|S / Steam"
+        },
+        {
+          "label": "ジャンル",
+          "value": "3D 格闘アクション"
+        },
+        {
+          "label": "使用可能ファイター",
+          "value": "29"
+        },
+        {
+          "label": "バトルステージ",
+          "value": "13"
+        },
+        {
+          "label": "Core Fighters",
+          "value": "4"
+        },
+        {
+          "label": "Steam 実績",
+          "value": "37"
+        }
+      ],
+      "cta": "すべての攻略を見る"
+    },
+    "explore": {
+      "title": "デッドオアアライブ 6 ラストラウンド 攻略モジュール",
+      "description": "キャラ一覧、初心者システム、Core Fighters の詳細、写真モードの手順、セーブデータ移行、DLC ルール、ステージ攻略へ直接アクセス。",
+      "modules": [
+        {
+          "order": 1,
+          "name": "デッドオアアライブ 6 ラストラウンド キャラクター",
+          "description": "使用可能な全ファイターを確認し、完全版にどのファイターが含まれているかを確認できます。当ページではオリジナルの 24 人、追加ボーナスファイター 5 人、別売りのコラボファイターを分けて紹介します。",
+          "href": "/characters",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "フルロスター",
+              "detail": "標準版には 29 人の使用可能なファイターが含まれます。"
+            },
+            {
+              "label": "オリジナルファイター",
+              "detail": "霞、マリー・ローズ、ほのか、ニコレ、ヘレナ、疾風、隼人、ジャン・リー、ザック、ディエゴ、リグ、仁美、雷芳、綾音、ベイマン、バス、ティナ、ミラ、クリスティ、恋心、ラ・マリポサ、ブラッド・ウォン、エリオット、雷道。"
+            },
+            {
+              "label": "ボーナスファイター",
+              "detail": "女天道、フェーズ 4、玉姫、紅葉、レイチェルがオリジナルの 24 人に追加されます。"
+            },
+            {
+              "label": "コラボファイター",
+              "detail": "不知火舞とクーラ・ダイヤモンドは別扱いで、それぞれ専用のアンロックキーが必要です。"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "デッドオアアライブ 6 ラストラウンド 初心者ガイド",
+          "description": "DEAD OR ALIVE が他の 3D 格闘と何が違うかを決めるコアシステムを学びましょう。このガイドでは、トライアングルシステム、Fatal Rush、ブレイクゲージ、守りのホールド、ステージギミックを順に解説します。",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "チュートリアルとフリートレーニングで移動、ガード、打撃、投げ、ホールドを学ぼう。"
+            },
+            {
+              "label": "2",
+              "detail": "トライアングルシステムを覚えよう：打撃は投げに勝ち、投げはホールドに勝ち、ホールドは打撃に勝つ。"
+            },
+            {
+              "label": "3",
+              "detail": "最大 4 ヒットで初心者でも扱える Fatal Rush を練習しよう。"
+            },
+            {
+              "label": "4",
+              "detail": "戦闘でブレイクゲージを溜め、50% で Break Hold、100% で Break Blow を使おう。"
+            },
+            {
+              "label": "5",
+              "detail": "壁、観衆、破壊可能オブジェクト、Danger Zone を使ってダメージを伸ばし、有利な状況を作ろう。"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "デッドオアアライブ 6 ラストラウンド Core Fighters",
+          "description": "ダウンロード前に無料版 Core Fighters と有料標準版を比較しましょう。無料ロスター、利用可能モード、アンロック条件、フルゲームを購入しなくても残る機能を解説します。",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "無料ファイター",
+              "detail": "霞、マリー・ローズ、ほのか、ニコレは最初から使用可能。",
+              "badge": "無料"
+            },
+            {
+              "label": "モード",
+              "detail": "Core Fighters にはバーサス、アーケード、タイムアタック、サバイバル、トレーニングモード、ランクマッチ、ロビーマッチ、DOA Central、写真モードが含まれます。"
+            },
+            {
+              "label": "ストーリー",
+              "detail": "ストーリーモードはストーリーアンロックキーを購入しない限り利用できません。"
+            },
+            {
+              "label": "アンロックキー",
+              "detail": "Core Fighters で初期 4 人以外のキャラクターを使うには個別のアンロックキーが必要です。"
+            },
+            {
+              "label": "完全版",
+              "detail": "有料標準版には、29 人分のストーリーアンロックキーとキャラクターアンロックキーが含まれます。"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "デッドオアアライブ 6 ラストラウンド モードとクロスプレイ",
+          "description": "ラストラウンドに含まれる主要なオフライン、トレーニング、カスタマイズ、オンラインの全モードを確認できます。また、クロスプラットフォームの制限も把握して、誰とマッチングできるかを理解できます。",
+          "href": "/features/dead-or-alive-6-last-round-crossplay",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "オフライン",
+              "detail": "バーサス、アーケード、タイムアタック、サバイバルが利用可能。"
+            },
+            {
+              "label": "トレーニング",
+              "detail": "フリートレーニング、チュートリアル、コマンドトレーニング、コンボトレーニングが含まれる。"
+            },
+            {
+              "label": "進行",
+              "detail": "ストーリーモードと DOA Quest が構造化されたシングルプレイヤーコンテンツを提供。"
+            },
+            {
+              "label": "オンライン",
+              "detail": "ランクマッチとロビーマッチに対応。"
+            },
+            {
+              "label": "DOA Central",
+              "detail": "ワードローブ、データベースシアター、ミュージック、ライブラリ、写真モードが中央ハブから利用可能。"
+            },
+            {
+              "label": "クロスプレイ",
+              "detail": "異なるプラットフォーム間のクロスプレイは非対応で、DEAD OR ALIVE 6 と DEAD OR ALIVE 6 ラストラウンドがオンラインで対戦することもできません。"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "デッドオアアライブ 6 ラストラウンド 写真モードガイド",
+          "description": "新しい写真モードでキャラクターのポートレートやアクションシーンを作成しましょう。ステージ選択、ファイター配置、ポーズ・表情変更、完成画像の撮影までの公式ワークフローを解説します。",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "写真モードを開き、シーンのステージとキャラクターを選択しよう。"
+            },
+            {
+              "label": "2",
+              "detail": "各キャラクターを移動、回転、配置して構図を作ろう。"
+            },
+            {
+              "label": "3",
+              "detail": "アクションまたは演出用ポートレートのためにスキルかポーズを選択しよう。"
+            },
+            {
+              "label": "4",
+              "detail": "表情、汗、汚れなどのビジュアル要素を調整しよう。"
+            },
+            {
+              "label": "5",
+              "detail": "各プラットフォームのスクリーンショット機能で最終画像をキャプチャしよう。"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "デッドオアアライブ 6 ラストラウンド セーブデータ移行ガイド",
+          "description": "DEAD OR ALIVE 6 の対応する進行状況、所持アイテム、コスチュームを、対応データを失わずにラストラウンドへ移行しましょう。共有アカウントの要件、プラットフォーム別の準備、ゲーム内移行プロンプト、重要な制限を解説します。",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "元のセーブデータと対象 DLC を所有する PlayStation Network、Xbox、Steam の同じアカウントを使用しよう。"
+            },
+            {
+              "label": "2",
+              "detail": "PlayStation の場合、PS4 版の DEAD OR ALIVE 6 をバージョン 1.23 にアップデートし、ゲームを起動してメインメニューから DLC データをアップロードしよう。"
+            },
+            {
+              "label": "3",
+              "detail": "Xbox Series X|S または Steam では、同じアカウントでラストラウンドを起動すると、対象 DLC が自動検出されます。"
+            },
+            {
+              "label": "4",
+              "detail": "元のセーブを新しい本体または PC で利用できるようにし、ラストラウンドを起動してタイトル画面の表示が出たら「Transfer」を選択しよう。"
+            },
+            {
+              "label": "5",
+              "detail": "ラストラウンドの新規セーブを作成する前にインポートを完了させてください。既存のラストラウンドセーブがある場合、削除してからでないと旧セーブは移行できません。"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "デッドオアアライブ 6 ラストラウンド コスチュームと DLC",
+          "description": "新しいコスメティックコンテンツと、DEAD OR ALIVE 6 から引き継げるコンテンツを確認しましょう。また、コラボコスチューム、キャラクターアンロック、プレミアムチケットに関する重要な例外も紹介します。",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "新しいコスチューム",
+              "detail": "ラストラウンドでは霞、綾音、マリー・ローズ、ほのか、ニコレの 5 着の新規コスチュームが追加されます。",
+              "badge": "新規"
+            },
+            {
+              "label": "既存コスチューム",
+              "detail": "同じプラットフォームアカウントを使用している場合、購入済みの DEAD OR ALIVE 6 コスチュームのほとんどが引き継げます。"
+            },
+            {
+              "label": "コラボコスチューム",
+              "detail": "不知火舞とクーラ・ダイヤモンドの既存コスチュームは引き継ぎできません。"
+            },
+            {
+              "label": "アンロック",
+              "detail": "DEAD OR ALIVE 6 の追加キャラクターアンロックは引き継がれません。標準版は 29 ファイターで、不知火舞とクーラ・ダイヤモンドは別キーが必要です。"
+            },
+            {
+              "label": "チケット",
+              "detail": "PS4 版 DEAD OR ALIVE 6 のプレミアムチケットはラストラウンドでは使用できません。"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "デッドオアアライブ 6 ラストラウンド ステージと Danger Zone",
+          "description": "ラストラウンドのアリーナにある環境ギミック、遷移、破壊可能要素を学びましょう。花火、観衆、壁、車両、ロープ、破壊可能オブジェクトが試合を変えるステージをハイライトします。",
+          "href": "/features",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "朧",
+              "detail": "Lost Paradise: 朧は、新しい朧ライティングシステムで強化された南国ステージのアップグレード版です。"
+            },
+            {
+              "label": "フェスティバル",
+              "detail": "Chinese Festival ステージに散らばる未使用の花火は、触れると爆発します。"
+            },
+            {
+              "label": "Unforgettable",
+              "detail": "歴代 DEAD OR ALIVE 作品の印象的なロケーションと機能する Danger Zone を組み合わせたギャラリー風アリーナ。"
+            },
+            {
+              "label": "Hidden Garden",
+              "detail": "竹で覆われた丘陵で相手を叩き抜けると、戦闘は人里離れた Hidden Garden へ遷移します。"
+            },
+            {
+              "label": "The Muscle",
+              "detail": "火柱と帯電したリングロープが特徴のプロレスアリーナ。"
+            },
+            {
+              "label": "コロッセオ",
+              "detail": "大会のメイン格闘技ステージ。ファイターがリングロープに触れると爆発が発生します。"
+            },
+            {
+              "label": "Rumble Danger",
+              "detail": "観客が打ち上げられたファイターをアリーナ内に押し戻し、ふらつき状態にします。"
+            },
+            {
+              "label": "破壊",
+              "detail": "箱、壺、その他のステージオブジェクトを壊して追加ダメージを与え、再生成はされません。"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "よくある質問",
+      "description": "デッドオアアライブ 6 ラストラウンドに関するよくある質問への素早い回答。",
+      "items": [
+        {
+          "question": "デッドオアアライブ 6 ラストラウンドとは何ですか？",
+          "answer": "デッドオアアライブ 6 ラストラウンドは、PS5、Xbox Series X|S、Steam 向け Team NINJA の 3D 格闘ゲームの現世代決定版です。打・投・捌き のトライアングル、ステージギミック、Break Gauge 攻撃、写真モードを軸に据えています。"
+        },
+        {
+          "question": "デッドオアアライブ 6 ラストラウンドには何人のファイターがいますか？",
+          "answer": "デッドオアアライブ 6 ラストラウンドの標準版には 29 人の使用可能ファイターが含まれ、オリジナルロスターに女天道、フェーズ 4、玉姫、紅葉、レイチェルが加わります。不知火舞とクーラ・ダイヤモンドは別扱いのコラボファイターアンロックです。"
+        },
+        {
+          "question": "デッドオアアライブ 6 ラストラウンド Core Fighters には何が含まれますか？",
+          "answer": "デッドオアアライブ 6 ラストラウンド Core Fighters は霞、マリー・ローズ、ほのか、ニコレの 4 人から始まり、バーサス、アーケード、タイムアタック、サバイバル、トレーニング、ランクマッチ、ロビーマッチ、DOA Central、写真モードを利用可能です。ストーリーモードと追加ファイターはアンロックキーが必要です。"
+        },
+        {
+          "question": "デッドオアアライブ 6 ラストラウンドはクロスプレイに対応していますか？",
+          "answer": "デッドオアアライブ 6 ラストラウンドは異なるプラットフォーム間のクロスプレイに対応していません。オンラインプレイは元の DEAD OR ALIVE 6 とも分離されており、両バージョン同士でオンライン対戦はできません。"
+        },
+        {
+          "question": "DEAD OR ALIVE 6 のセーブデータと DLC をデッドオアアライブ 6 ラストラウンドへ移行できますか？",
+          "answer": "同じプラットフォームアカウントを使用する場合、対応する進行状況、所持アイテム、対応コスチュームをデッドオアアライブ 6 ラストラウンドへインポートできます。コラボコスチューム、追加キャラクターアンロック、PS4 版プレミアムチケットなど一部のコンテンツには例外があります。"
+        },
+        {
+          "question": "デッドオアアライブ 6 ラストラウンド 写真モードでは何ができますか？",
+          "answer": "デッドオアアライブ 6 ラストラウンド 写真モードでは、ステージとファイターを選び、キャラクターを移動・回転し、ポーズやスキルを設定、表情とビジュアル要素を調整し、選択したプラットフォームのスクリーンショット機能でシーンをキャプチャできます。"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "デッドオアアライブ 6 ラストラウンドを極めよう",
+      "description": "最初のカウンターホールドから高度な壁圧、キャラ対策、写真モードセットアップ、セーブデータ移行まで、このコミュニティ Wiki は調べる時間を減らし、プレイする時間を増やすお手伝いをします。",
+      "primary": "PS5 / Xbox / Steam ガイドを読む",
+      "secondary": "Steam でプレイ"
+    }
+  },
+  "guide": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド ガイド",
+    "overviewDescription": "初心者向けのコツ、コンボルート、フレームデータ、ストーリー攻略のメモ、コスチューム解放、実用的な戦闘基礎から始めましょう。"
+  },
+  "release": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド 発売情報",
+    "overviewDescription": "発売日、料金、予約特典、Core Fighters アクセス、DLC ルール、無料アップグレード、物理版情報を追跡。"
+  },
+  "platforms": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド プラットフォーム",
+    "overviewDescription": "PS5、Xbox、Steam、PC、Nintendo Switch、Steam Deck でのデッドオアアライブ 6 ラストラウンド対応を比較。"
+  },
+  "characters": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド キャラクター",
+    "overviewDescription": "ロスター一覧、新規ファイター、tier リスト、コラボキャラクター、声優リファレンスを閲覧。"
+  },
+  "features": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド 機能",
+    "overviewDescription": "クロスプレイ状況、ロールバック議論、ゲームプレイ変更、写真モード機能をラストラウンド版でチェック。"
+  },
+  "media": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド メディア",
+    "overviewDescription": "トレーラー、ゲームプレイ分解、ストーリーモードメモ、グラフィック比較、コスチューム特集を視聴。"
+  },
+  "reviews": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド レビュー",
+    "overviewDescription": "レビュー、バージョン比較、そしてデッドオアアライブ 6 ラストラウンドが価値があるかどうかの判断材料をチェック。"
+  },
+  "community": {
+    "overviewTitle": "デッドオアアライブ 6 ラストラウンド コミュニティ",
+    "overviewDescription": "コミュニティの議論、最新ニュース、Reddit 活動、Steam Charts でのデッドオアアライブ 6 ラストラウンドへの関心をフォロー。"
+  },
+  "shared": {
+    "wikiNavigation": "Wiki ナビゲーション",
+    "activeCodes": "ガイドステータス",
+    "updated": "更新日",
+    "viewAllCodes": "ガイド一覧を見る",
+    "inThisSection": "このセクションの内容",
+    "tableOfContents": "目次",
+    "nextSteps": "次のステップ",
+    "needHelp": "お困りですか？",
+    "relatedReading": "関連情報",
+    "relatedGuides": "関連ガイド",
+    "readMore": "続きを読む",
+    "officialMedia": "公式メディア",
+    "home": "ホーム",
+    "noGuidesAvailable": "まだガイドがありません。また後でチェックしてください。",
+    "guideStatusDesc": "デッドオアアライブ 6 ラストラウンドには現在、引き換えコードシステムはありません。",
+    "playOnSteam": "Steam でプレイ"
+  },
+  "footer": {
+    "aboutTitle": "デッドオアアライブ 6 ラストラウンド Wiki",
+    "about": "デッドオアアライブ 6 ラストラウンド Wiki は、ファイター、コンボ、ステージ、操作、写真モード、解放要素、Core Fighters 攻略を扱う非公式ファン制作の攻略ハブです。Team NINJA および KOEI TECMO GAMES とは関係ありません。",
+    "quickLinks": "クイックリンク",
+    "guides": "ガイド",
+    "legal": "法的事項",
+    "copyright": "2026 Dead or Alive 6 Last Round Wiki. Team NINJA および KOEI TECMO GAMES とは関係ありません。",
+    "description": "PS5、Xbox Series X|S、Steam 対応の現世代 3D 格闘ゲーム。29 人のファイター、13 のステージ、写真モード、Core Fighters を収録。",
+    "playGame": "Steam でプレイ",
+    "officialDiscord": "KOEI TECMO Global Discord",
+    "officialYoutube": "KOEI TECMO AMERICA YouTube",
+    "beginnerGuide": "ガイド",
+    "raceGuides": "キャラクター",
+    "bossGuides": "プラットフォーム",
+    "buildGuide": "発売情報",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "communityHub": "Steam コミュニティハブ"
+  }
+}
