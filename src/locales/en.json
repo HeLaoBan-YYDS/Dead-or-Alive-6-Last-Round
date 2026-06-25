@@ -1,10 +1,10 @@
 {
   "site": {
-    "name": "VV: ULTIMATUM",
-    "shortName": "VV Ultimatum",
-    "tagline": "Fan-Made Community Wiki",
-    "description": "Your complete companion for VV: ULTIMATUM on Roblox. Master all three races Shinigami, Quincy, and Hollow with in-depth guides, boss strategies, build optimization, and the latest codes.",
-    "legalNotice": "Non-official fan wiki. Made by players, for players."
+    "name": "Dead or Alive 6 Last Round Wiki",
+    "shortName": "DOA6 Last Round Wiki",
+    "tagline": "Fan-Made Fighting Game Wiki",
+    "description": "Independent fan-made Dead or Alive 6 Last Round guide hub for PS5, Xbox Series X|S, and Steam, covering fighters, combos, stages, controls, Photo Mode, unlocks, and Core Fighters help.",
+    "legalNotice": "Unofficial fan wiki. Not affiliated with Team NINJA or KOEI TECMO GAMES."
   },
   "nav": {
     "races": "Races",
@@ -25,20 +25,20 @@
       "description": "Complete VV: ULTIMATUM wiki with active codes, boss strategies, race guides, build optimization, and progression walkthroughs for Shinigami, Quincy, and Hollow."
     },
     "hero": {
-      "eyebrow": "Fan-Made Community Wiki",
-      "title": "VV: ULTIMATUM",
-      "description": "Your complete companion for VV: ULTIMATUM on Roblox. Master all three races Shinigami, Quincy, and Hollow with in-depth guides, boss strategies, build optimization, and the latest codes.",
+      "eyebrow": "Independent Fan-Made Fighting Game Wiki",
+      "title": "Dead or Alive 6 Last Round Wiki",
+      "description": "Return to Team NINJA's fast, tactical 3D fighting arena on PS5, Xbox Series X|S, and Steam. Learn the strike, throw, and hold triangle, compare 29 fighters, master stage hazards, and use Photo Mode with confidence.",
       "stats": [
-        "Launched Jun 5",
-        "Updated Jun 11",
-        "3 Races",
-        "Lv100 Cap",
-        "130+ Skills"
+        "Released Jun 25, 2026",
+        "29 Playable Fighters",
+        "13 Battle Stages",
+        "4 Free Core Fighters",
+        "37 Steam Achievements"
       ],
-      "primaryCta": "Start Beginner Guide",
-      "secondaryCta": "Compare Races",
-      "tertiaryCta": "Check Active Codes",
-      "videoLabel": "Official media"
+      "primaryCta": "Start PS5/Xbox/Steam Guide",
+      "secondaryCta": "Compare Fighters",
+      "tertiaryCta": "Try Core Fighters",
+      "videoLabel": "Official Announcement Trailer"
     },
     "updates": {
       "title": "动态更新",
@@ -429,10 +429,10 @@
       ]
     },
     "finalCta": {
-      "title": "Ready to Master VV: ULTIMATUM?",
-      "description": "From your first steps in Fort Adams to endgame boss fights our community wiki has you covered with free, up-to-date guides.",
-      "primary": "Read the Beginner Guide",
-      "secondary": "Play on Roblox"
+      "title": "Ready to Master Dead or Alive 6 Last Round?",
+      "description": "From your first counter hold to advanced wall pressure, character matchups, Photo Mode setups, and save-transfer notes, this community wiki helps you spend less time searching and more time fighting.",
+      "primary": "Read the PS5/Xbox/Steam Guide",
+      "secondary": "Play on Steam"
     }
   },
   "bosses": {
@@ -466,17 +466,17 @@
     "noGuidesAvailable": "No guides available yet. Check back soon!"
   },
   "footer": {
-    "aboutTitle": "VV Ultimatum Wiki",
-    "about": "VV Ultimatum Wiki is an independent fan-built guide hub covering progression routes, races, bosses, builds, and essential game knowledge for new and veteran players alike.",
+    "aboutTitle": "Dead or Alive 6 Last Round Wiki",
+    "about": "Dead or Alive 6 Last Round Wiki is an independent fan-made guide hub for fighters, combos, stages, controls, Photo Mode, unlocks, and Core Fighters help. It is not affiliated with Team NINJA or KOEI TECMO GAMES.",
     "quickLinks": "Quick Links",
     "guides": "Guides",
     "legal": "Legal",
-    "copyright": "2026 VV: ULTIMATUM Wiki. Not affiliated with Midnight Continent or Roblox.",
-    "description": "Free Bleach-inspired fighting RPG on Roblox. 3 races, 130+ skills, Lv100 cap.",
-    "playGame": "Play VV: ULTIMATUM",
-    "officialDiscord": "Official Discord",
-    "officialYoutube": "Official YouTube",
-    "vvBuilder": "VV Builder (Skill Planner)",
+    "copyright": "2026 Dead or Alive 6 Last Round Wiki. Not affiliated with Team NINJA or KOEI TECMO GAMES.",
+    "description": "Current-generation 3D fighter on PS5, Xbox Series X|S, and Steam with 29 fighters, 13 stages, Photo Mode, and Core Fighters.",
+    "playGame": "Play on Steam",
+    "officialDiscord": "KOEI TECMO Global Discord",
+    "officialYoutube": "KOEI TECMO AMERICA YouTube",
+    "vvBuilder": "Steam Community Hub",
     "beginnerGuide": "Beginner Guide",
     "raceGuides": "Race Guides",
     "bossGuides": "Boss Guides",

@@ -12,11 +12,22 @@ import { CONTENT_TYPES } from "@/config/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import en from "@/locales/en.json";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vvultimatum.sbs";
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://dead-or-alive-6-last-round.wiki").replace(/\/$/, "");
 type Messages = typeof en;
+const defaultImagePath = "/images/hero.webp";
 
 function languageAlternates(pathname: string) {
   return Object.fromEntries(routing.locales.map((locale) => [locale, locale === "en" ? pathname : `/${locale}${pathname}`]));
+}
+
+function localizedPath(pathname: string, locale: Locale) {
+  return locale === "en" ? pathname : `/${locale}${pathname}`;
+}
+
+function absoluteUrl(pathname: string, locale?: Locale) {
+  if (pathname.startsWith("http")) return pathname;
+  const path = locale ? localizedPath(pathname, locale) : pathname;
+  return `${siteUrl}${path}`;
 }
 
 export async function generateStaticParams() {
@@ -32,16 +43,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     const ct = slug[0];
     const ctTitle = ct.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     const ctMessages = (messages as unknown as Record<string, Record<string, string>>)[ct];
-    const title = ctMessages?.overviewTitle || `${ctTitle} — VV Ultimatum Wiki`;
-    const description = ctMessages?.overviewDescription || `Browse all ${ctTitle.toLowerCase()} guides and resources for VV Ultimatum.`;
-    return { title, description, alternates: { canonical: `/${ct}`, languages: languageAlternates(`/${ct}`) }, openGraph: { title, description, url: `${siteUrl}/${ct}`, images: [`${siteUrl}/images/hero.webp`] } };
+    const title = ctMessages?.overviewTitle || `${ctTitle} - ${messages.site.name}`;
+    const description = ctMessages?.overviewDescription || `Browse all ${ctTitle.toLowerCase()} guides and resources for Dead or Alive 6 Last Round.`;
+    return {
+      title,
+      description,
+      alternates: { canonical: localizedPath(`/${ct}`, locale), languages: languageAlternates(`/${ct}`) },
+      openGraph: { title, description, url: absoluteUrl(`/${ct}`, locale), images: [absoluteUrl(defaultImagePath)] },
+      twitter: { card: "summary_large_image", title, description, images: [absoluteUrl(defaultImagePath)] },
+    };
   }
   const [contentType, ...articleSlug] = slug;
   const item = await getContent(contentType, articleSlug, locale);
   if (!item) return { title: "Not Found" };
   const pathname = `/${contentType}/${articleSlug.join("/")}`;
-  const image = item.metadata.image?.startsWith("http") ? item.metadata.image : `${siteUrl}${item.metadata.image ?? "/images/hero.webp"}`;
-  return { title: `${item.metadata.title} — VV Ultimatum Wiki`, description: item.metadata.description, alternates: { canonical: pathname, languages: languageAlternates(pathname) }, openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: `${siteUrl}${pathname}`, images: [image] }, twitter: { card: "summary_large_image", images: [image] } };
+  const image = absoluteUrl(item.metadata.image ?? defaultImagePath);
+  return { title: `${item.metadata.title} - ${messages.site.name}`, description: item.metadata.description, alternates: { canonical: localizedPath(pathname, locale), languages: languageAlternates(pathname) }, openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: absoluteUrl(pathname, locale), images: [image] }, twitter: { card: "summary_large_image", title: item.metadata.title, description: item.metadata.description, images: [image] } };
 }
 
 export default async function SlugPage({ params }: { params: Promise<{ locale: Locale; slug: string[] }> }) {
@@ -55,7 +72,7 @@ async function NavigationPage({ locale, contentType, navGroups }: { locale: Loca
   if (!CONTENT_TYPES.includes(contentType)) notFound();
   const messages = (await getMessages({ locale })) as Messages;
   const items = await getAllContent(contentType, locale);
-  const listData = { "@context": "https://schema.org", "@type": "ItemList", name: `${contentType} — VV Ultimatum Wiki`, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, url: `${siteUrl}/${contentType}/${item.slug}`, name: item.metadata.title })) };
+  const listData = { "@context": "https://schema.org", "@type": "ItemList", name: `${contentType} - ${messages.site.name}`, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, url: absoluteUrl(`/${contentType}/${item.slug}`, locale), name: item.metadata.title })) };
 
   // 读取分类标题（优先用 locale JSON 里的，没有就转 slug）
   const sectionTitle = (messages as unknown as Record<string, Record<string, string>>)[contentType]?.overviewTitle
@@ -73,8 +90,9 @@ async function DetailPage({ locale, contentType, slug, navGroups }: { locale: Lo
   const pathname = `/${contentType}/${slug.join("/")}`;
   const tocLabel = messages.shared.tableOfContents || messages.shared.inThisSection || "Table of Contents";
   const sectionLabel = contentType.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-  const articleData = { "@context": "https://schema.org", "@type": "Article", headline: item.metadata.title, description: item.metadata.description, image: `${siteUrl}${item.metadata.image ?? "/images/hero.webp"}`, datePublished: item.metadata.date, dateModified: item.metadata.lastModified ?? item.metadata.date, mainEntityOfPage: `${siteUrl}${pathname}`, author: { "@type": "Organization", name: "VV Ultimatum Wiki" }, publisher: { "@type": "Organization", name: "VV Ultimatum Wiki", logo: { "@type": "ImageObject", url: `${siteUrl}/android-chrome-512x512.png` } } };
-  const breadcrumbData = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: siteUrl }, { "@type": "ListItem", position: 2, name: sectionLabel, item: `${siteUrl}/${contentType}` }, { "@type": "ListItem", position: 3, name: item.metadata.title, item: `${siteUrl}${pathname}` }] };
+  const articleImage = absoluteUrl(item.metadata.image ?? defaultImagePath);
+  const articleData = { "@context": "https://schema.org", "@type": "Article", headline: item.metadata.title, description: item.metadata.description, image: articleImage, datePublished: item.metadata.date, dateModified: item.metadata.lastModified ?? item.metadata.date, mainEntityOfPage: absoluteUrl(pathname, locale), author: { "@type": "Organization", name: messages.site.name }, publisher: { "@type": "Organization", name: messages.site.name, logo: { "@type": "ImageObject", url: `${siteUrl}/android-chrome-512x512.png` } } };
+  const breadcrumbData = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/", locale) }, { "@type": "ListItem", position: 2, name: sectionLabel, item: absoluteUrl(`/${contentType}`, locale) }, { "@type": "ListItem", position: 3, name: item.metadata.title, item: absoluteUrl(pathname, locale) }] };
 
   const relatedLabel = messages.shared.relatedGuides || "Related Guides";
 

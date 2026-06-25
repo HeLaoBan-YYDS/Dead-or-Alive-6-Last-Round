@@ -6,18 +6,21 @@ import { routing, type Locale } from "@/i18n/routing";
 import en from "@/locales/en.json";
 import HomePageClient from "./HomePageClient";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vvultimatum.sbs";
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://dead-or-alive-6-last-round.wiki").replace(/\/$/, "");
 
 type Messages = typeof en;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await getMessages({ locale })) as Messages;
+  const title = `${messages.site.name} - Fighters & Guides`;
+  const description = messages.site.description;
   return {
-    title: messages.home.meta.title,
-    description: messages.home.meta.description,
+    title,
+    description,
     alternates: { canonical: locale === "en" ? "/" : `/${locale}`, languages: { en: "/" } },
-    openGraph: { title: messages.home.meta.title, description: messages.home.meta.description, url: siteUrl, images: [`${siteUrl}/images/hero.webp`] },
+    openGraph: { title, description, url: siteUrl, siteName: messages.site.name, images: [`${siteUrl}/images/hero.webp`] },
+    twitter: { card: "summary_large_image", title, description, images: [`${siteUrl}/images/hero.webp`] },
   };
 }
 
@@ -26,7 +29,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
   const loc = locale as Locale;
   const messages = (await getMessages({ locale })) as Messages;
   const navGroups = getDynamicNavigation(loc);
-  const webSite = { "@context": "https://schema.org", "@type": "WebSite", name: "VV Ultimatum Wiki", url: siteUrl, description: messages.home.meta.description };
+  const webSite = { "@context": "https://schema.org", "@type": "WebSite", name: messages.site.name, alternateName: messages.site.shortName, url: siteUrl, description: messages.site.description, inLanguage: locale };
 
   // 动态加载所有 content 目录下的文章
   const allArticles: ContentItem[] = [];
