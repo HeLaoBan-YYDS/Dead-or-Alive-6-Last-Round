@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea6a923-81f0-4487-95c6-51fed8751e13" name="Changes" comment="阶段三">
-      <change beforePath="$PROJECT_DIR$/doc/步骤四.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/步骤四.txt" afterDir="false" />
+    <list default="true" id="bea6a923-81f0-4487-95c6-51fed8751e13" name="Changes" comment="阶段四">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/阶段五.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/阶段五.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/HomePageClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/HomePageClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/language-switcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/language-switcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/site.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/site.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/locales/en.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1782181932330</updated>
       <workItem from="1782181933450" duration="2000" />
-      <workItem from="1782356227045" duration="3692000" />
+      <workItem from="1782356227045" duration="4708000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -119,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782360557443</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="阶段四">
+      <option name="closed" value="true" />
+      <created>1782361143582</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1782361143582</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +146,7 @@
     <MESSAGE value="阶段一" />
     <MESSAGE value="阶段二" />
     <MESSAGE value="阶段三" />
-    <option name="LAST_COMMIT_MESSAGE" value="阶段三" />
+    <MESSAGE value="阶段四" />
+    <option name="LAST_COMMIT_MESSAGE" value="阶段四" />
   </component>
 </project>

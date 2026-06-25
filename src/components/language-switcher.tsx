@@ -14,6 +14,8 @@ import {
 const LOCALE_LABELS: Record<Locale, string> = {
   en: "English",
   ja: "日本語",
+  ko: "한국어",
+  es: "Español",
 };
 
 /**

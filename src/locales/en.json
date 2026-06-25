@@ -6,7 +6,16 @@
     "description": "Independent fan-made Dead or Alive 6 Last Round guide hub for PS5, Xbox Series X|S, and Steam, covering fighters, combos, stages, controls, Photo Mode, unlocks, and Core Fighters help.",
     "legalNotice": "Unofficial fan wiki. Not affiliated with Team NINJA or KOEI TECMO GAMES."
   },
-  "nav": {},
+  "nav": {
+    "guide": "Guide",
+    "release": "Release",
+    "platforms": "Platforms",
+    "characters": "Characters",
+    "features": "Features",
+    "media": "Media",
+    "reviews": "Reviews",
+    "community": "Community"
+  },
   "home": {
     "meta": {
       "title": "Dead or Alive 6 Last Round Wiki - Fighters & Guides",
@@ -73,7 +82,7 @@
           "badge": "Beginner",
           "title": "Beginner Guide",
           "description": "Learn the triangle system, Break Gauge, defensive Holds, and practical first-match habits.",
-          "href": "/beginner-guide"
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide"
         },
         {
           "badge": "Roster",
@@ -85,37 +94,37 @@
           "badge": "Free",
           "title": "Core Fighters",
           "description": "See what the free Core Fighters edition includes before deciding which unlock keys to buy.",
-          "href": "/core-fighters"
+          "href": "/release/dead-or-alive-6-last-round-core-fighters"
         },
         {
           "badge": "Systems",
           "title": "Modes and Crossplay",
           "description": "Check offline modes, training tools, online play, DOA Central, and platform matching limits.",
-          "href": "/modes-crossplay"
+          "href": "/features/dead-or-alive-6-last-round-crossplay"
         },
         {
           "badge": "Guide",
           "title": "Photo Mode Guide",
           "description": "Create portraits and action scenes with character placement, poses, expressions, and visual options.",
-          "href": "/photo-mode"
+          "href": "/features/dead-or-alive-6-last-round-photo-mode"
         },
         {
           "badge": "Transfer",
           "title": "Save Transfer Guide",
           "description": "Move eligible Dead or Alive 6 progress, owned items, and costumes into Last Round.",
-          "href": "/save-transfer"
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over"
         },
         {
           "badge": "DLC",
           "title": "Costumes and DLC",
           "description": "Review new costumes, carry-over rules, collaboration exceptions, and Premium Ticket limits.",
-          "href": "/costumes-dlc"
+          "href": "/release/dead-or-alive-6-last-round-all-dlc"
         },
         {
           "badge": "Stages",
           "title": "Stages and Danger Zones",
           "description": "Learn how walls, ropes, fireworks, crowds, vehicles, and breakable objects can change a match.",
-          "href": "/stages"
+          "href": "/features"
         }
       ]
     },
@@ -190,7 +199,7 @@
           "order": 2,
           "name": "Dead or Alive 6 Last Round Beginner Guide",
           "description": "Learn the core systems that make Dead or Alive different from other 3D fighting games. This guide covers the triangle system, Fatal Rush, the Break Gauge, defensive Holds, and stage hazards in a practical learning order.",
-          "href": "/beginner-guide",
+          "href": "/guide/dead-or-alive-6-last-round-beginner-guide",
           "displayType": "step-by-step",
           "highlights": [
             {
@@ -219,7 +228,7 @@
           "order": 3,
           "name": "Dead or Alive 6 Last Round Core Fighters",
           "description": "Compare the free-to-play Core Fighters edition with the paid standard version before downloading. The page explains the free roster, included modes, unlock requirements, and which features remain available without purchasing the full game.",
-          "href": "/core-fighters",
+          "href": "/release/dead-or-alive-6-last-round-core-fighters",
           "displayType": "card-list",
           "highlights": [
             {
@@ -249,7 +258,7 @@
           "order": 4,
           "name": "Dead or Alive 6 Last Round Modes and Crossplay",
           "description": "Check every major offline, training, customization, and online mode included in Last Round. The page also clarifies the game's cross-platform limitations so players know who they can match with.",
-          "href": "/modes-crossplay",
+          "href": "/features/dead-or-alive-6-last-round-crossplay",
           "displayType": "card-list",
           "highlights": [
             {
@@ -282,7 +291,7 @@
           "order": 5,
           "name": "Dead or Alive 6 Last Round Photo Mode Guide",
           "description": "Create character portraits and action scenes with the new Photo Mode. This guide explains the official workflow for choosing a scene, positioning fighters, changing poses and expressions, and capturing the finished image.",
-          "href": "/photo-mode",
+          "href": "/features/dead-or-alive-6-last-round-photo-mode",
           "displayType": "step-by-step",
           "highlights": [
             {
@@ -311,7 +320,7 @@
           "order": 6,
           "name": "Dead or Alive 6 Last Round Save Transfer Guide",
           "description": "Move eligible Dead or Alive 6 progression, owned items, and costumes into Last Round without losing supported data. The instructions cover the shared-account requirement, platform-specific preparation, the in-game transfer prompt, and important restrictions.",
-          "href": "/save-transfer",
+          "href": "/release/dead-or-alive-6-last-round-dlc-carry-over",
           "displayType": "step-by-step",
           "highlights": [
             {
@@ -340,7 +349,7 @@
           "order": 7,
           "name": "Dead or Alive 6 Last Round Costumes and DLC",
           "description": "See what new cosmetic content is included and which purchases from Dead or Alive 6 can carry over. The page also identifies important exceptions involving collaboration costumes, character unlocks, and Premium Tickets.",
-          "href": "/costumes-dlc",
+          "href": "/release/dead-or-alive-6-last-round-all-dlc",
           "displayType": "card-list",
           "highlights": [
             {
@@ -370,7 +379,7 @@
           "order": 8,
           "name": "Dead or Alive 6 Last Round Stages and Danger Zones",
           "description": "Learn the environmental hazards, transitions, and destructible features found across Last Round's arenas. The stage guide highlights locations where fireworks, crowds, walls, vehicles, ropes, and breakable objects can change a match.",
-          "href": "/stages",
+          "href": "/features",
           "displayType": "card-list",
           "highlights": [
             {
@@ -446,7 +455,38 @@
       "secondary": "Play on Steam"
     }
   },
-  "bosses": {},
+  "guide": {
+    "overviewTitle": "Dead or Alive 6 Last Round Guide",
+    "overviewDescription": "Start with beginner tips, combo routes, frame data, story walkthrough notes, costume unlock help, and practical fighting fundamentals."
+  },
+  "release": {
+    "overviewTitle": "Dead or Alive 6 Last Round Release",
+    "overviewDescription": "Track release date details, pricing, preorder bonuses, Core Fighters access, DLC rules, free upgrade notes, and physical copy information."
+  },
+  "platforms": {
+    "overviewTitle": "Dead or Alive 6 Last Round Platforms",
+    "overviewDescription": "Compare PS5, Xbox, Steam, PC, Nintendo Switch, and Steam Deck coverage for Dead or Alive 6 Last Round."
+  },
+  "characters": {
+    "overviewTitle": "Dead or Alive 6 Last Round Characters",
+    "overviewDescription": "Browse roster lists, new fighters, tier list guidance, collaboration characters, and voice actor references."
+  },
+  "features": {
+    "overviewTitle": "Dead or Alive 6 Last Round Features",
+    "overviewDescription": "Review crossplay status, rollback discussion, gameplay changes, and Photo Mode features for the Last Round edition."
+  },
+  "media": {
+    "overviewTitle": "Dead or Alive 6 Last Round Media",
+    "overviewDescription": "Watch trailer coverage, gameplay breakdowns, story mode notes, graphics comparisons, and costume showcases."
+  },
+  "reviews": {
+    "overviewTitle": "Dead or Alive 6 Last Round Reviews",
+    "overviewDescription": "Read review coverage, version comparisons, and buying advice for whether Dead or Alive 6 Last Round is worth it."
+  },
+  "community": {
+    "overviewTitle": "Dead or Alive 6 Last Round Community",
+    "overviewDescription": "Follow community discussion, latest news, Reddit activity, and Steam Charts interest around Dead or Alive 6 Last Round."
+  },
   "shared": {
     "wikiNavigation": "Wiki Navigation",
     "activeCodes": "Guide Status",
@@ -475,10 +515,10 @@
     "playGame": "Play on Steam",
     "officialDiscord": "KOEI TECMO Global Discord",
     "officialYoutube": "KOEI TECMO AMERICA YouTube",
-    "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Fighter Guides",
-    "bossGuides": "Stage Guides",
-    "buildGuide": "Combo Guide",
+    "beginnerGuide": "Guide",
+    "raceGuides": "Characters",
+    "bossGuides": "Platforms",
+    "buildGuide": "Release",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "communityHub": "Steam Community Hub"
