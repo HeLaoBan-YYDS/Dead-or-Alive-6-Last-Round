@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
+import { type Locale } from "@/i18n/routing";
+import { pageAlternates } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: "Terms of Service",
+    description: "Terms of service for the independent Dead or Alive 6 Last Round Wiki.",
+    alternates: pageAlternates("/terms-of-service", locale),
+  };
+}
 
 export default function TermsOfServicePage() {
   return (

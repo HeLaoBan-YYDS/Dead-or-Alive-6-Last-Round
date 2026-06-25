@@ -3,24 +3,25 @@ import { getMessages } from "next-intl/server";
 import { JsonLd, WikiSidebar } from "@/components/site";
 import { getAllContent, getDynamicNavigation, type ContentItem, CONTENT_TYPES } from "@/lib/content";
 import { routing, type Locale } from "@/i18n/routing";
+import { absoluteUrl, defaultSeoImagePath, openGraphLocale, pageAlternates } from "@/lib/seo";
 import en from "@/locales/en.json";
 import HomePageClient from "./HomePageClient";
-
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://dead-or-alive-6-last-round.wiki").replace(/\/$/, "");
 
 type Messages = typeof en;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const loc = locale as Locale;
   const messages = (await getMessages({ locale })) as Messages;
   const title = `${messages.site.name} - Fighters & Guides`;
   const description = messages.site.description;
+  const image = absoluteUrl(defaultSeoImagePath);
   return {
     title,
     description,
-    alternates: { canonical: locale === "en" ? "/" : `/${locale}`, languages: { en: "/" } },
-    openGraph: { title, description, url: siteUrl, siteName: messages.site.name, images: [`${siteUrl}/images/hero.webp`] },
-    twitter: { card: "summary_large_image", title, description, images: [`${siteUrl}/images/hero.webp`] },
+    alternates: pageAlternates("/", loc),
+    openGraph: { type: "website", title, description, url: absoluteUrl("/", loc), locale: openGraphLocale(loc), siteName: messages.site.name, images: [image] },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
   };
 }
 
@@ -29,7 +30,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
   const loc = locale as Locale;
   const messages = (await getMessages({ locale })) as Messages;
   const navGroups = getDynamicNavigation(loc);
-  const webSite = { "@context": "https://schema.org", "@type": "WebSite", name: messages.site.name, alternateName: messages.site.shortName, url: siteUrl, description: messages.site.description, inLanguage: locale };
+  const webSite = { "@context": "https://schema.org", "@type": "WebSite", name: messages.site.name, alternateName: messages.site.shortName, url: absoluteUrl("/", loc), description: messages.site.description, inLanguage: locale };
 
   // 动态加载所有 content 目录下的文章
   const allArticles: ContentItem[] = [];

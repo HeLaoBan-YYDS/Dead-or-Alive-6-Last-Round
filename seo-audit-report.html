@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO 审计报告 - Dead or Alive 6 Last Round Wiki</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --bg-card: #111827;
+      --bg-soft: #1f2937;
+      --border: #374151;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --primary-soft: #1e3a8a;
+      --green: #10b981;
+      --yellow: #f59e0b;
+      --red: #ef4444;
+      --purple: #8b5cf6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    header.hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+      padding: 56px 0 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    header.hero h1 { margin: 0 0 12px; font-size: 34px; font-weight: 800; letter-spacing: -0.5px; }
+    header.hero .sub { color: #dbeafe; font-size: 17px; margin-bottom: 24px; }
+    header.hero .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+    header.hero .meta-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+    }
+    header.hero .meta-card .label { font-size: 12px; color: #dbeafe; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    header.hero .meta-card .value { font-size: 18px; font-weight: 700; color: #fff; }
+
+    section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    h2 { font-size: 26px; font-weight: 700; margin: 0 0 8px; display: flex; align-items: center; gap: 12px; }
+    h2 .num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--primary-soft); color: #bfdbfe;
+      font-size: 15px; font-weight: 700;
+    }
+    h3 { font-size: 18px; font-weight: 700; margin: 28px 0 12px; color: #f3f4f6; }
+    .section-desc { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+
+    .score-overview {
+      display: grid; grid-template-columns: 280px 1fr; gap: 32px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 32px;
+    }
+    .score-ring {
+      position: relative; width: 220px; height: 220px; margin: 0 auto;
+    }
+    .score-ring svg { transform: rotate(-90deg); }
+    .score-ring .ring-bg { fill: none; stroke: var(--bg-soft); stroke-width: 14; }
+    .score-ring .ring-fg { fill: none; stroke: var(--yellow); stroke-width: 14; stroke-linecap: round; transition: stroke-dashoffset 1s; }
+    .score-ring .score-text {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .score-ring .score-num { font-size: 52px; font-weight: 800; color: var(--yellow); line-height: 1; }
+    .score-ring .score-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+    .score-stats { display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+    .score-stat { display: flex; align-items: center; gap: 12px; }
+    .score-stat .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .score-stat .dot.green { background: var(--green); }
+    .score-stat .dot.yellow { background: var(--yellow); }
+    .score-stat .dot.red { background: var(--red); }
+    .score-stat .txt { flex: 1; font-size: 14px; }
+    .score-stat .count { font-weight: 700; }
+
+    .priority-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .priority-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-left: 4px solid var(--text-muted);
+      border-radius: 8px; padding: 18px;
+    }
+    .priority-card.critical { border-left-color: var(--red); }
+    .priority-card.high { border-left-color: var(--yellow); }
+    .priority-card.medium { border-left-color: var(--primary); }
+    .priority-card.low { border-left-color: var(--text-muted); }
+    .priority-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; margin-bottom: 8px; }
+    .priority-card.critical .label { color: var(--red); }
+    .priority-card.high .label { color: var(--yellow); }
+    .priority-card.medium .label { color: var(--primary); }
+    .priority-card.low .label { color: var(--text-muted); }
+    .priority-card .big-num { font-size: 32px; font-weight: 800; margin-bottom: 4px; }
+    .priority-card .desc { font-size: 13px; color: var(--text-muted); }
+
+    .issue {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 22px; margin-bottom: 16px;
+    }
+    .issue-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+    .issue-title { font-size: 17px; font-weight: 700; margin: 0; flex: 1; min-width: 240px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 10px; border-radius: 999px;
+      font-size: 12px; font-weight: 600;
+      border: 1px solid;
+    }
+    .badge.critical { background: rgba(239,68,68,0.12); color: #fca5a5; border-color: rgba(239,68,68,0.4); }
+    .badge.high { background: rgba(245,158,11,0.12); color: #fcd34d; border-color: rgba(245,158,11,0.4); }
+    .badge.medium { background: rgba(59,130,246,0.12); color: #93c5fd; border-color: rgba(59,130,246,0.4); }
+    .badge.low { background: rgba(156,163,175,0.12); color: #d1d5db; border-color: rgba(156,163,175,0.4); }
+    .badge.pass { background: rgba(16,185,129,0.12); color: #6ee7b7; border-color: rgba(16,185,129,0.4); }
+    .issue-body { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .issue-body .block { }
+    .issue-body .block-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+      color: var(--text-muted); font-weight: 700; margin-bottom: 6px;
+    }
+    .issue-body .block-content { font-size: 14px; color: #d1d5db; }
+    .issue-body .block-content code {
+      background: var(--bg-soft); padding: 2px 6px; border-radius: 4px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 12px; color: #fbbf24;
+    }
+    .issue-body .block-content ul { margin: 6px 0 0; padding-left: 18px; }
+    .issue-body .block-content li { margin-bottom: 4px; }
+    @media (max-width: 720px) {
+      .issue-body { grid-template-columns: 1fr; }
+      .score-overview { grid-template-columns: 1fr; }
+    }
+
+    table {
+      width: 100%; border-collapse: collapse; margin: 12px 0;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td { padding: 11px 14px; text-align: left; font-size: 13.5px; border-bottom: 1px solid var(--border); }
+    th { background: var(--bg-soft); color: #f3f4f6; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(59,130,246,0.05); }
+    .ok { color: var(--green); font-weight: 600; }
+    .warn { color: var(--yellow); font-weight: 600; }
+    .fail { color: var(--red); font-weight: 600; }
+
+    .action-list { counter-reset: step; }
+    .action-item {
+      display: grid; grid-template-columns: 44px 1fr auto; gap: 16px;
+      align-items: start;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 18px; margin-bottom: 12px;
+    }
+    .action-item .step-num {
+      counter-increment: step;
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--primary-soft); color: #bfdbfe;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px;
+    }
+    .action-item .step-num::before { content: counter(step); }
+    .action-item .step-body h4 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
+    .action-item .step-body p { margin: 0; color: var(--text-muted); font-size: 13.5px; }
+    .action-item .step-body code {
+      background: var(--bg-soft); padding: 2px 6px; border-radius: 4px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 12px; color: #fbbf24;
+    }
+    .action-item .step-priority { white-space: nowrap; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+    .stat-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 18px;
+    }
+    .stat-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; }
+    .stat-card .value { font-size: 24px; font-weight: 700; }
+    .stat-card .value.ok { color: var(--green); }
+    .stat-card .value.warn { color: var(--yellow); }
+    .stat-card .value.fail { color: var(--red); }
+    .stat-card .note { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+    .callout {
+      background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08));
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 10px; padding: 20px; margin: 20px 0;
+    }
+    .callout .title { font-weight: 700; margin-bottom: 8px; color: #93c5fd; }
+
+    footer { padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); }
+    footer a { color: var(--primary); text-decoration: none; }
+    .code-block {
+      background: #0d1117; border: 1px solid var(--border);
+      border-radius: 8px; padding: 14px; margin: 8px 0;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 12.5px; color: #c9d1d9; overflow-x: auto;
+    }
+    .code-block .k { color: #79c0ff; }
+    .code-block .s { color: #a5d6ff; }
+    .code-block .c { color: #8b949e; }
+    .code-block .p { color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>SEO 审计报告</h1>
+      <div class="sub">Dead or Alive 6 Last Round Wiki - 多语言粉丝维基站点</div>
+      <div class="meta-grid">
+        <div class="meta-card"><div class="label">审计目标</div><div class="value">http://localhost:3001/</div></div>
+        <div class="meta-card"><div class="label">审计日期</div><div class="value">2026-06-25</div></div>
+        <div class="meta-card"><div class="label">站点类型</div><div class="value">Next.js 15 多语言 Wiki</div></div>
+        <div class="meta-card"><div class="label">支持语言</div><div class="value">EN / JA / KO / ES</div></div>
+        <div class="meta-card"><div class="label">生产域名</div><div class="value">dead-or-alive-6-last-round.wiki</div></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2><span class="num">0</span>执行摘要</h2>
+      <p class="section-desc">本报告基于对 http://localhost:3001/ 的实际页面渲染、HTML 源码、响应头、sitemap、robots.txt 与 Next.js 源代码的综合审计。</p>
+
+      <div class="score-overview">
+        <div class="score-ring">
+          <svg width="220" height="220">
+            <circle class="ring-bg" cx="110" cy="110" r="92"></circle>
+            <circle class="ring-fg" cx="110" cy="110" r="92"
+              stroke-dasharray="578"
+              stroke-dashoffset="202"></circle>
+          </svg>
+          <div class="score-text">
+            <div class="score-num">65</div>
+            <div class="score-label">/ 100 综合评分</div>
+          </div>
+        </div>
+        <div class="score-stats">
+          <div class="score-stat"><span class="dot red"></span><span class="txt"><span class="count">0</span> 个严重问题（hreflang 阻断项已完成）</span></div>
+          <div class="score-stat"><span class="dot yellow"></span><span class="txt"><span class="count">5</span> 个高优先级问题（影响点击率/OG/性能）</span></div>
+          <div class="score-stat"><span class="dot yellow"></span><span class="txt"><span class="count">7</span> 个中优先级问题</span></div>
+          <div class="score-stat"><span class="dot"></span><span class="txt"><span class="count">4</span> 个低优先级问题</span></div>
+          <div class="score-stat"><span class="dot green"></span><span class="txt"><span class="count">13</span> 项已通过的良好实践</span></div>
+          <p style="margin: 8px 0 0; color: var(--text-muted); font-size: 13px;">站点技术基础扎实，详情页与列表页的 hreflang 实现正确，schema markup 覆盖完整。<strong>主页与布局层</strong>以及 <strong>sitemap.xml</strong> 的 hreflang 集群均已于 2026-06-25 修复并通过本地生产构建验证；当前剩余问题集中在高/中优先级优化项。</p>
+        </div>
+      </div>
+
+      <h3>优先级分布</h3>
+      <div class="priority-grid">
+        <div class="priority-card critical"><div class="label">严重 Critical</div><div class="big-num">0</div><div class="desc">严重 hreflang 阻断项已完成</div></div>
+        <div class="priority-card high"><div class="label">高 High</div><div class="big-num">5</div><div class="desc">描述过长、OG 缺失、JSON-LD 错误</div></div>
+        <div class="priority-card medium"><div class="label">中 Medium</div><div class="big-num">7</div><div class="desc">图片懒加载、标题品牌、性能</div></div>
+        <div class="priority-card low"><div class="label">低 Low</div><div class="big-num">4</div><div class="desc">标题模板、robots meta 等</div></div>
+      </div>
+
+      <div class="callout">
+        <div class="title">关键洞察</div>
+        站点的 <code>[...slug]/page.tsx</code>（详情/列表页）正确实现了 hreflang 与多语言 schema；此前主页、布局层与 sitemap 的 hreflang 集群不完整。现已通过 <code>src/lib/seo.ts</code> 统一输出 <code>en/ja/ko/es/x-default</code>，并验证 HTML head 与 sitemap.xml 均包含自引用、完整回链与 <code>x-default</code>。
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">1</span>技术 SEO 发现</h2>
+      <p class="section-desc">覆盖可抓取性、索引、站点速度、移动端友好与安全。</p>
+
+      <h3>1.1 已完成 - hreflang 集群已补全（主页与布局层）</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">主页与布局层已声明 <code>en/ja/ko/es/x-default</code> 完整 hreflang</h4>
+          <div class="badges">
+            <span class="badge pass">已完成 Verified</span>
+            <span class="badge pass">影响：已修复</span>
+            <span class="badge medium">国际 SEO</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">完成状态</div>
+            <div class="block-content">
+              已新增 <code>src/lib/seo.ts</code>，并在 <code>src/app/[locale]/page.tsx</code>、<code>src/app/[locale]/layout.tsx</code> 中复用统一的 <code>languageAlternates()</code> / <code>pageAlternates()</code>。主页 canonical 与 OpenGraph URL 也已按 locale 本地化。<br/>
+              生产构建验证（<code>http://localhost:3002/</code>）：
+              <ul>
+                <li><code>/</code>、<code>/ja</code>、<code>/ko</code>、<code>/es</code> 均返回 200</li>
+                <li>每个主页均输出 5 个 hreflang：<code>en/ja/ko/es/x-default</code></li>
+                <li>每个 locale 均包含自引用；<code>x-default</code> 指向英文根 URL</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">验证结果</div>
+            <div class="block-content">
+              <strong>已验证</strong>：<code>npm run build</code> 成功；抓取脚本确认 canonical 与 hreflang 集群一致：
+              <ul>
+                <li><code>/</code> canonical：<code>https://dead-or-alive-6-last-round.wiki</code></li>
+                <li><code>/ja</code> canonical：<code>https://dead-or-alive-6-last-round.wiki/ja</code></li>
+                <li><code>/ko</code> canonical：<code>https://dead-or-alive-6-last-round.wiki/ko</code></li>
+                <li><code>/es</code> canonical：<code>https://dead-or-alive-6-last-round.wiki/es</code></li>
+              </ul>
+              <strong>当前输出</strong>：
+              <div class="code-block">alternates: {
+  canonical: <span class="s">pageAlternates("/", locale).canonical</span>,
+  languages: {
+    en: <span class="s">"/"</span>,
+    ja: <span class="s">"/ja"</span>,
+    ko: <span class="s">"/ko"</span>,
+    es: <span class="s">"/es"</span>,
+    <span class="p">"x-default"</span>: <span class="s">"/"</span>,
+  },
+}</div>
+              <strong>状态</strong>：1.1 已完成。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>1.2 已完成 - sitemap.xml 已添加 hreflang 交替链接</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">sitemap.xml 已声明 <code>xmlns:xhtml</code>，每个 <code>&lt;url&gt;</code> 均包含完整 <code>&lt;xhtml:link&gt;</code> 交替链接</h4>
+          <div class="badges">
+            <span class="badge pass">已完成 Verified</span>
+            <span class="badge pass">影响：已修复</span>
+            <span class="badge medium">国际 SEO</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">完成状态</div>
+            <div class="block-content">
+              <code>src/app/sitemap.ts</code> 已复用 <code>src/lib/seo.ts</code> 中的 <code>absoluteUrl()</code> 与 <code>absoluteLanguageAlternates()</code>。每个 locale 的 canonical URL 仍作为独立 <code>&lt;loc&gt;</code> 提交，同时每个条目都包含 4 语言 + <code>x-default</code>：
+              <div class="code-block"><span class="c">// 当前 sitemap 条目（已添加 alternates）</span>
+{
+  url: <span class="s">absoluteUrl(path, locale)</span>,
+  lastModified: <span class="k">new</span> Date(),
+  changeFrequency: ...,
+  priority: ...,
+  alternates: {
+    languages: <span class="s">absoluteLanguageAlternates(path)</span>,
+  },
+}</div>
+              验证结果：<code>/sitemap.xml</code> 已输出 <code>xmlns:xhtml="http://www.w3.org/1999/xhtml"</code>，所有 <code>&lt;url&gt;</code> 节点都包含 <code>&lt;xhtml:link&gt;</code> 子节点。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">验证结果</div>
+            <div class="block-content">
+              <strong>已验证</strong>：<code>npm run build</code> 成功；生产服务抓取 <code>http://localhost:3002/sitemap.xml</code>：
+              <ul>
+                <li>HTTP 状态：<code>200</code>，Content-Type：<code>application/xml</code></li>
+                <li><code>&lt;url&gt;</code> 条目：<code>212</code></li>
+                <li>每个条目均包含 <code>5</code> 条 <code>&lt;xhtml:link&gt;</code>，总计 <code>1060</code> 条</li>
+                <li>抽查 <code>/</code>、<code>/ja</code>、<code>/ja/about</code>、<code>/es/guide/dead-or-alive-6-last-round-beginner-guide</code> 均包含自引用、完整回链与 <code>x-default</code></li>
+              </ul>
+              <strong>状态</strong>：1.2 已完成。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>1.3 高优先级 - 非 JSON-LD 的 url 字段在非英语页面指向英文根</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">Organization 与 WebSite schema 的 <code>url</code> 在 /ja 页面仍指向英文根 URL</h4>
+          <div class="badges">
+            <span class="badge high">高 High</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge medium">结构化数据</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              <code>src/app/[locale]/layout.tsx</code> 第 53 行，Organization schema 的 <code>url</code> 与 <code>logo</code> 都使用 <code>siteUrl</code>（英文根）：
+              <div class="code-block"><span class="k">const</span> organization = {
+  <span class="s">"@type"</span>: <span class="s">"Organization"</span>,
+  name: messages.site.name,
+  url: siteUrl,  <span class="c">// ❌ 永远指向英文根</span>
+  ...
+};</div>
+              <code>src/app/[locale]/page.tsx</code> 第 32 行的 WebSite schema 同样问题：<code>url: siteUrl</code>。<br/>
+              抓取 /ja 主页验证：<code>Organization.url = "https://dead-or-alive-6-last-round.wiki"</code>（非 /ja）。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：所有 locale 的 schema 都把英文 URL 当作主体 URL，混淆了 Google 对实体与页面关系的理解。在多语言站点中，schema 的 <code>url</code> 应指向当前页面所属语言的规范 URL。<br/><br/>
+              <strong>修复</strong>：在 Organization 与 WebSite schema 中使用本地化 URL：
+              <div class="code-block"><span class="k">const</span> localizedUrl = locale === <span class="s">"en"</span> ? siteUrl : <span class="s">`${siteUrl}/${locale}`</span>;
+<span class="k">const</span> organization = {
+  <span class="s">"@type"</span>: <span class="s">"Organization"</span>,
+  name: messages.site.name,
+  url: localizedUrl,  <span class="c">// ✅ 本地化</span>
+  logo: <span class="s">`${siteUrl}/android-chrome-512x512.png`</span>,
+  ...
+};</div>
+              注意：logo 与 image 这类资源 URL 可以保持全局一致，只需 <code>url</code> 本地化。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>1.4 高优先级 - localeDetection 自动重定向可能干扰抓取</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title"><code>localeDetection: true</code> 基于 Accept-Language 自动重定向</h4>
+          <div class="badges">
+            <span class="badge high">高 High</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge medium">国际 SEO</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              <code>src/i18n/routing.ts</code> 第 16 行：<code>localeDetection: true</code>。<br/>
+              验证：访问 <code>http://localhost:3001/</code> 时，由于浏览器 Accept-Language 头被识别为日语环境，被重定向到 <code>/ja</code>。
+              <div class="code-block"><span class="c">// 浏览器导航日志：</span>
+Page URL: http://localhost:3001/ja
+<span class="c">// 实际请求的是 /</span></div>
+              虽然 Googlebot 通常以 US IP + 无 Accept-Language 抓取（会得到 en），但其他爬虫/工具可能触发重定向，且本地用户首次访问时被强制重定向可能影响 backlink 与分享链接的目标一致性。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：Google 明确不建议基于 IP/Accept-Language 的内容协商，因为隐藏了内容且造成 URL 不稳定。<br/><br/>
+              <strong>修复</strong>：将 <code>localeDetection</code> 设为 <code>false</code>，改用明显的语言切换器（站点已有 <code>language-switcher.tsx</code>）+ 清晰的 hreflang 让 Google 自行匹配：
+              <div class="code-block"><span class="k">export const</span> routing = defineRouting({
+  locales: [<span class="s">"en"</span>, <span class="s">"ja"</span>, <span class="s">"ko"</span>, <span class="s">"es"</span>],
+  defaultLocale: <span class="s">"en"</span>,
+  localePrefix: <span class="s">"as-needed"</span>,
+  <span class="p">localeDetection: false</span>,  <span class="c">// ✅ 关闭自动检测</span>
+});</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>1.5 中优先级 - 图片无 <code>loading="lazy"</code></h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">所有页面图片均未启用懒加载</h4>
+          <div class="badges">
+            <span class="badge medium">中 Medium</span>
+            <span class="badge low">影响：低-中</span>
+            <span class="badge medium">性能</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              抓取结果：主页 2 张图片，详情页 1 张图片，<strong>0 张</strong>带 <code>loading="lazy"</code>。<br/>
+              站点使用 <code>next/image</code>（<code>&lt;Image&gt;</code> 组件），但 <code>next.config.mjs</code> 设置 <code>images.unoptimized: true</code>，且代码中没有显式 <code>loading="lazy"</code> 属性。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：首屏外的图片立即加载会拖慢 LCP，浪费带宽与数据。<br/><br/>
+              <strong>修复</strong>：对非首屏图片添加 <code>loading="lazy"</code>，或在 <code>next/image</code> 中设置 <code>priority={false}</code>（默认即为 false，但需确认未被显式覆盖）。对 hero 图保持 <code>priority</code> 以优化 LCP。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>1.6 已通过项 - 技术 SEO 良好实践</h3>
+      <table>
+        <thead><tr><th>检查项</th><th>状态</th><th>证据</th></tr></thead>
+        <tbody>
+          <tr><td>HTTPS（生产）</td><td class="ok">通过</td><td>sitemap/robots/canonical 全部使用 <code>https://dead-or-alive-6-last-round.wiki</code></td></tr>
+          <tr><td>robots.txt</td><td class="ok">通过</td><td>允许 <code>User-Agent: *</code> 抓取 <code>/</code>，正确声明 sitemap</td></tr>
+          <tr><td>XML sitemap 存在</td><td class="ok">通过</td><td>43,607 字节，包含所有 locale × 所有路径</td></tr>
+          <tr><td>viewport 配置</td><td class="ok">通过</td><td><code>width=device-width, initial-scale=1</code></td></tr>
+          <tr><td>charset 声明</td><td class="ok">通过</td><td><code>utf-8</code></td></tr>
+          <tr><td>HTML lang 属性</td><td class="ok">通过</td><td>每页 <code>&lt;html lang&gt;</code> 与 locale 一致（en/ja/ko/es）</td></tr>
+          <tr><td>响应式设计</td><td class="ok">通过</td><td>无 m. 子域，无水平滚动</td></tr>
+          <tr><td>无 robots noindex 误用</td><td class="ok">通过</td><td>未发现 noindex 标签</td></tr>
+          <tr><td>ISR 预渲染</td><td class="ok">通过</td><td>响应头 <code>x-nextjs-cache: HIT</code>，<code>x-nextjs-prerender: 1</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>页面 SEO 发现</h2>
+      <p class="section-desc">标题、描述、heading 结构、Open Graph、内部链接。</p>
+
+      <h3>2.1 高优先级 - 主页 meta description 过长（184 字符）</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">主页描述超出 SERP 显示上限 24 字符</h4>
+          <div class="badges">
+            <span class="badge high">高 High</span>
+            <span class="badge high">影响：高（CTR）</span>
+            <span class="badge low">页面 SEO</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              主页描述长度 = <strong>184 字符</strong>，Google SERP 通常显示 150-160 字符，超长会被截断为 <code>...</code>。<br/>
+              当前描述（en）：
+              <div class="code-block">Independent fan-made Dead or Alive 6 Last Round guide hub for PS5, Xbox Series X|S, and Steam, covering fighters, combos, stages, controls, Photo Mode, unlocks, and Core Fighters help. <span class="c">// 184 字符</span></div>
+              日文版 126 字符（合规），但英文版偏长。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：SERP 中描述尾部被 <code>...</code> 替换，丢失 "Core Fighters help" 等关键信息，降低点击率。<br/><br/>
+              <strong>修复</strong>：精简至 150-160 字符以内，例如：
+              <div class="code-block">Fan-made Dead or Alive 6 Last Round guide for PS5, Xbox Series X|S, and Steam. Fighters, combos, stages, controls, Photo Mode, and Core Fighters help. <span class="c">// ~150 字符</span></div>
+              并在 <code>src/locales/en.json</code> 中更新 <code>site.description</code>。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>2.2 高优先级 - OpenGraph type 与 locale 缺失（主页与布局）</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">主页 OG 缺少 <code>og:type</code>、<code>og:locale</code></h4>
+          <div class="badges">
+            <span class="badge high">高 High</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge low">社交分享</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              <code>src/app/[locale]/layout.tsx</code> 第 30 行的 <code>openGraph</code> 没有 <code>type</code>，<code>locale</code> 虽然有但抓取结果显示 og:locale 未输出：<br/>
+              <div class="code-block">openGraph: {
+  type: <span class="s">"website"</span>,  <span class="c">// ✅ 已设置但抓取未见 og:type 输出</span>
+  locale,            <span class="c">// ✅ 已设置但抓取未见 og:locale 输出</span>
+  url: siteUrl,
+  ...
+}</div>
+              抓取主页：og:type、og:locale 均未出现在 HTML 中。详情页 <code>[...slug]/page.tsx</code> 中 <code>openGraph.type = "article"</code> 反而能正常输出。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：社交平台（Facebook、LinkedIn、Discord）分享时无法识别内容类型与语言，预览体验差。<br/><br/>
+              <strong>修复</strong>：1. 在 layout.tsx 的 <code>openGraph</code> 中显式补全：
+              <div class="code-block">openGraph: {
+  type: <span class="s">"website"</span>,
+  locale: locale === <span class="s">"en"</span> ? <span class="s">"en_US"</span> : locale,  <span class="c">// 转为标准 OG locale</span>
+  url: <span class="s">`${siteUrl}${locale === "en" ? "" : `/${locale}`}`</span>,
+  siteName: messages.site.name,
+  images: [...],
+}</div>
+              2. og:locale 应使用下划线格式（<code>en_US</code>、<code>ja_JP</code>、<code>ko_KR</code>、<code>es_ES</code>），而非短代码。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>2.3 高优先级 - 主页 og:url 指向英文根（即使访问 /ja）</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">所有 locale 主页的 <code>og:url</code> 都指向英文根 URL</h4>
+          <div class="badges">
+            <span class="badge high">高 High</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge low">社交分享</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              <code>layout.tsx</code> 第 33 行：<code>url: siteUrl</code>（永远是英文根）。<br/>
+              抓取 /ja 主页：<code>og:url = "https://dead-or-alive-6-last-round.wiki"</code>（应为 /ja）。<br/>
+              主页 <code>page.tsx</code> 第 22 行同样：<code>url: siteUrl</code>。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：日韩西语用户分享主页时，社交预览与点击跳转都指向英文版，破坏本地化体验，也削弱了非英语页面的社交信号积累。<br/><br/>
+              <strong>修复</strong>：将 og:url 本地化：
+              <div class="code-block">url: <span class="s">`${siteUrl}${locale === "en" ? "" : `/${locale}`}`</span>,</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>2.4 中优先级 - 标题缺少品牌后缀（列表页）</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">列表页标题未附加品牌名</h4>
+          <div class="badges">
+            <span class="badge medium">中 Medium</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge low">品牌识别</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              <code>layout.tsx</code> 第 27 行：<code>title: { default: "...", template: "%s" }</code>。<br/>
+              template 为 <code>"%s"</code>，即<strong>不附加任何后缀</strong>。<br/>
+              抓取 /characters：<code>&lt;title&gt;Dead or Alive 6 Last Round Characters&lt;/title&gt;</code>（37 字符，无品牌）。<br/>
+              详情页则在代码中手动拼接：<code>${`\`${item.metadata.title} - ${messages.site.name}\``}</code>。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：SERP 中所有列表页看起来像孤立页面，缺乏品牌识别度。Google 也会用品牌信号判断权威性。<br/><br/>
+              <strong>修复</strong>：使用 template 自动附加品牌：
+              <div class="code-block">title: {
+  default: <span class="s">"Dead or Alive 6 Last Round Wiki"</span>,
+  template: <span class="s">"%s | Dead or Alive 6 Last Round Wiki"</span>,  <span class="c">// ✅</span>
+},</div>
+              然后从详情页代码中移除手动的 <code>- ${'$'}{messages.site.name}</code> 拼接，统一由 template 处理。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>2.5 中优先级 - 日文主页标题翻译不完整</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue">日文主页标题含未本地化的 <code>"Fighters &amp; Guides"</code></h4>
+          <div class="badges">
+            <span class="badge medium">中 Medium</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge low">本地化</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              抓取 /ja：<code>&lt;title&gt;デッドオアアライブ 6 ラストラウンド Wiki - Fighters &amp; Guides&lt;/title&gt;</code><br/>
+              "Fighters & Guides" 未本地化，这是 <code>src/app/[locale]/page.tsx</code> 第 16 行硬编码：
+              <div class="code-block"><span class="k">const</span> title = <span class="s">`${messages.site.name} - Fighters & Guides`</span>;  <span class="c">// ❌ 硬编码英文</span></div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：日韩西语用户在 SERP 看到混合语言标题，降低点击率与信任度。Google 也会用可见文本判断语言，混合标题可能造成语言信号不一致。<br/><br/>
+              <strong>修复</strong>：将 "Fighters & Guides" 加入 locale JSON 的 <code>home.meta.title</code>，en.json 中已存在 <code>"Dead or Alive 6 Last Round Wiki - Fighters & Guides"</code>，但需要拆分出可翻译部分：
+              <div class="code-block"><span class="c">// en.json</span>
+<span class="s">"home"</span>: { <span class="s">"meta"</span>: { <span class="s">"title"</span>: <span class="s">"Dead or Alive 6 Last Round Wiki - Fighters & Guides"</span> } }
+
+<span class="c">// ja.json</span>
+<span class="s">"home"</span>: { <span class="s">"meta"</span>: { <span class="s">"title"</span>: <span class="s">"デッドオアアライブ 6 ラストラウンド Wiki - ファイター & 攻略"</span> } }</div>
+              然后在 page.tsx 中使用 <code>messages.home.meta.title</code>。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>2.6 已通过项 - 页面 SEO 良好实践</h3>
+      <table>
+        <thead><tr><th>检查项</th><th>状态</th><th>证据</th></tr></thead>
+        <tbody>
+          <tr><td>H1 唯一性</td><td class="ok">通过</td><td>主页、列表页、详情页均仅 1 个 H1，含主关键词</td></tr>
+          <tr><td>标题长度（详情页）</td><td class="ok">通过</td><td>详情页 75 字符（含品牌），符合 50-60 上限宽容度</td></tr>
+          <tr><td>canonical 自引用</td><td class="ok">通过</td><td>所有页面 canonical 指向自身规范 URL</td></tr>
+          <tr><td>img alt 文本</td><td class="ok">通过</td><td>主页 2 张、详情页 1 张图片均有 alt</td></tr>
+          <tr><td>内部链接数</td><td class="ok">通过</td><td>主页 125 内部链接，链接深度合理</td></tr>
+          <tr><td>Twitter Card</td><td class="ok">通过</td><td>summary_large_image 完整配置</td></tr>
+          <tr><td>OpenGraph（详情页）</td><td class="ok">通过</td><td>详情页 og:type=article、og:url 正确本地化</td></tr>
+          <tr><td>详情页 hreflang 完整</td><td class="ok">通过</td><td>4 个语言全部声明（en/ja/ko/es）+ 自引用</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>内容质量与结构化数据</h2>
+      <p class="section-desc">内容深度、E-E-A-T、JSON-LD schema 覆盖。</p>
+
+      <h3>内容深度统计</h3>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="label">主页字数</div><div class="value ok">4,941</div><div class="note">充足，覆盖游戏全维度</div></div>
+        <div class="stat-card"><div class="label">HTML 大小</div><div class="value warn">457 KB</div><div class="note">含内联 JS（dev 模式）</div></div>
+        <div class="stat-card"><div class="label">DOM 节点</div><div class="value ok">1,418</div><div class="note">合理范围</div></div>
+        <div class="stat-card"><div class="label">H2 数量</div><div class="value ok">7</div><div class="note">逻辑层次清晰</div></div>
+        <div class="stat-card"><div class="label">H3 数量</div><div class="value warn">101</div><div class="note">偏多，可能含 FAQ accordion</div></div>
+        <div class="stat-card"><div class="label">FAQ 项</div><div class="value ok">6</div><div class="note">建议补充 FAQPage schema</div></div>
+      </div>
+
+      <h3>3.1 中优先级 - 缺少 FAQPage schema</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">主页 FAQ 部分未输出 FAQPage JSON-LD</h4>
+          <div class="badges">
+            <span class="badge medium">中 Medium</span>
+            <span class="badge medium">影响：中</span>
+            <span class="badge low">富媒体结果</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              主页 FAQ 部分有 6 个问答（en.json 中 <code>home.faq.items</code>），但抓取主页仅发现 2 个 schema：<code>Organization</code> 与 <code>WebSite</code>。未输出 <code>FAQPage</code> schema，无法在 Google SERP 中获得 FAQ 富媒体结果展开。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">影响与修复</div>
+            <div class="block-content">
+              <strong>影响</strong>：FAQ 富媒体结果可占据 SERP 更多空间，提升点击率。也帮助 Google 理解问答结构用于 AI Overview。<br/><br/>
+              <strong>修复</strong>：在主页 page.tsx 中添加：
+              <div class="code-block"><span class="k">const</span> faqData = {
+  <span class="s">"@context"</span>: <span class="s">"https://schema.org"</span>,
+  <span class="s">"@type"</span>: <span class="s">"FAQPage"</span>,
+  mainEntity: messages.home.faq.items.map(item => ({
+    <span class="s">"@type"</span>: <span class="s">"Question"</span>,
+    name: item.question,
+    acceptedAnswer: { <span class="s">"@type"</span>: <span class="s">"Answer"</span>, text: item.answer },
+  })),
+};</div>
+              注意：2023 年起 Google 仅对"权威站点"显示 FAQ 富媒体结果，但站点作为官方 Wiki 主题相关，仍建议添加。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>3.2 已通过项 - 结构化数据覆盖</h3>
+      <table>
+        <thead><tr><th>页面类型</th><th>JSON-LD 类型</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>布局（所有页）</td><td>Organization</td><td class="ok">通过（但 url 字段需本地化）</td></tr>
+          <tr><td>主页</td><td>WebSite</td><td class="ok">通过（但 url 字段需本地化）</td></tr>
+          <tr><td>列表页（/characters 等）</td><td>ItemList</td><td class="ok">通过</td></tr>
+          <tr><td>详情页</td><td>Article</td><td class="ok">通过，含 author/publisher/datePublished</td></tr>
+          <tr><td>详情页</td><td>BreadcrumbList</td><td class="ok">通过，含 Home &gt; Section &gt; Article 层级</td></tr>
+        </tbody>
+      </table>
+
+      <h3>E-E-A-T 评估</h3>
+      <div class="callout">
+        <div class="title">粉丝维基的 E-E-A-T 现状</div>
+        <strong>经验 Experience</strong>：站点结构清晰，覆盖角色、连段、舞台、操作、Photo Mode、存档迁移等具体场景，体现对游戏的实际了解。<br/>
+        <strong>专业 Expertise</strong>：内容包含帧数据、3すくみ系统、Break Gauge 等专业术语，专业度足够。<br/>
+        <strong>权威 Authority</strong>：作为非官方粉丝 Wiki，权威性受限于与 Team NINJA / KOEI TECMO 的关系。已在 footer 与 legalNotice 中明确声明"非附属"。<br/>
+        <strong>可信 Trust</strong>：有隐私政策、服务条款、版权页面；HTTPS；联系渠道需补充（about 页可加入编辑团队介绍）。
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span>性能与 Core Web Vitals</h2>
+      <p class="section-desc">基于本地 dev 服务器测量。生产环境数值会显著优于以下数据。</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="label">TTFB</div><div class="value warn">594 ms</div><div class="note">dev 模式，生产应 &lt; 200ms</div></div>
+        <div class="stat-card"><div class="label">FCP</div><div class="value warn">1,472 ms</div><div class="note">dev 模式，生产目标 &lt; 1.8s</div></div>
+        <div class="stat-card"><div class="label">DOM Loaded</div><div class="value ok">1,336 ms</div><div class="note">合理</div></div>
+        <div class="stat-card"><div class="label">Load Event</div><div class="value ok">1,503 ms</div><div class="note">合理</div></div>
+        <div class="stat-card"><div class="label">资源数</div><div class="value ok">11</div><div class="note">5 CSS + 6 JS</div></div>
+        <div class="stat-card"><div class="label">传输大小</div><div class="value fail">3.48 MB</div><div class="note">JS 占 3.12MB（dev 未压缩）</div></div>
+        <div class="stat-card"><div class="label">HTML 传输</div><div class="value ok">52 KB</div><div class="note">含 ISR 缓存</div></div>
+      </div>
+
+      <h3>性能发现</h3>
+      <div class="issue">
+        <div class="issue-header">
+          <h4 class="issue-title">dev 模式下 JS 体积偏大（3.12 MB）</h4>
+          <div class="badges">
+            <span class="badge medium">中 Medium</span>
+            <span class="badge low">影响：低（生产已优化）</span>
+            <span class="badge medium">性能</span>
+          </div>
+        </div>
+        <div class="issue-body">
+          <div class="block">
+            <div class="block-label">问题</div>
+            <div class="block-content">
+              6 个 JS 脚本总传输 3.12 MB，是 dev 模式未压缩、未 chunk 优化的典型表现。包含 React DevTools、Fast Refresh 等开发开销。
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-label">建议</div>
+            <div class="block-content">
+              生产环境应使用 <code>next build &amp;&amp; next start</code> 后再次测量。建议：
+              <ul>
+                <li>使用 <a href="https://pagespeed.web.dev" target="_blank">PageSpeed Insights</a> 测量生产域名</li>
+                <li>关注 LCP（&lt; 2.5s）、INP（&lt; 200ms）、CLS（&lt; 0.1）</li>
+                <li>hero 图已使用 webp 格式（<code>/images/hero.webp</code>），LCP 友好</li>
+                <li>考虑为 hero 图添加 <code>fetchpriority="high"</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>移动端友好性</h3>
+      <table>
+        <thead><tr><th>检查项</th><th>状态</th><th>证据</th></tr></thead>
+        <tbody>
+          <tr><td>viewport meta</td><td class="ok">通过</td><td><code>width=device-width, initial-scale=1</code></td></tr>
+          <tr><td>响应式布局</td><td class="ok">通过</td><td>Tailwind 断点 grid 使用合理</td></tr>
+          <tr><td>无水平滚动</td><td class="ok">通过</td><td>scrollWidth 868 ≤ viewport 883</td></tr>
+          <tr><td>基础字号</td><td class="ok">通过</td><td>16px（body）</td></tr>
+          <tr><td>小点击目标</td><td class="warn">注意</td><td>4 个目标 &lt; 40×40 px</td></tr>
+          <tr><td>字号 &lt; 16px 的可点击元素</td><td class="warn">注意</td><td>14 个目标（多为导航次要链接）</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span>优先级行动计划</h2>
+      <p class="section-desc">按修复优先级排序，每项含具体代码定位与改动建议。</p>
+
+      <div class="action-list">
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>已完成：修复主页与布局的 hreflang 集群</h4>
+            <p>已新增 <code>src/lib/seo.ts</code> 并在 <code>src/app/[locale]/page.tsx</code> 与 <code>src/app/[locale]/layout.tsx</code> 中输出完整 4 语言 + <code>x-default</code>。已通过 <code>npm run build</code> 与本地生产服务抓取验证。</p>
+          </div>
+          <div class="step-priority"><span class="badge pass">已完成</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>已完成：在 sitemap.xml 中添加 hreflang alternates</h4>
+            <p>已修改 <code>src/app/sitemap.ts</code>，每个 URL 条目添加 <code>alternates.languages</code> 字段输出 4 语言 + <code>x-default</code>。已通过 <code>npm run build</code> 与本地生产服务抓取验证，sitemap 输出 <code>xmlns:xhtml</code> 与 <code>&lt;xhtml:link&gt;</code>。</p>
+          </div>
+          <div class="step-priority"><span class="badge pass">已完成</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>本地化 JSON-LD 的 url 字段</h4>
+            <p>在 <code>src/app/[locale]/layout.tsx</code> 第 53 行 Organization schema 与 <code>src/app/[locale]/page.tsx</code> 第 32 行 WebSite schema 中，将 <code>url: siteUrl</code> 改为本地化 URL（<code>locale === "en" ? siteUrl : \`${'$'}{siteUrl}/${'$'}{locale}\`</code>）。</p>
+          </div>
+          <div class="step-priority"><span class="badge high">高</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>关闭 localeDetection</h4>
+            <p>在 <code>src/i18n/routing.ts</code> 第 16 行将 <code>localeDetection: true</code> 改为 <code>false</code>。依靠 hreflang 与显式语言切换器（已存在 <code>language-switcher.tsx</code>）让用户/Googlebot 自主选择。</p>
+          </div>
+          <div class="step-priority"><span class="badge high">高</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>精简主页 meta description 至 ≤160 字符</h4>
+            <p>修改 <code>src/locales/en.json</code> 的 <code>site.description</code>，从 184 字符压缩至 150-160 字符。其他 locale（ja/ko/es）已合规，无需改动。</p>
+          </div>
+          <div class="step-priority"><span class="badge high">高</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>修复主页 og:type / og:locale / og:url</h4>
+            <p>在 <code>src/app/[locale]/layout.tsx</code> 与 <code>src/app/[locale]/page.tsx</code> 的 <code>openGraph</code> 中显式补全 <code>type: "website"</code>、<code>locale</code>（用下划线格式如 <code>en_US</code>、<code>ja_JP</code>）、<code>url</code>（本地化）。</p>
+          </div>
+          <div class="step-priority"><span class="badge high">高</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>本地化主页标题后缀 "Fighters & Guides"</h4>
+            <p>修改 <code>src/app/[locale]/page.tsx</code> 第 16 行，使用 <code>messages.home.meta.title</code>（已存在于 en.json），并为 ja/ko/es 三个 locale JSON 添加对应翻译。删除硬编码的 <code>- Fighters & Guides</code>。</p>
+          </div>
+          <div class="step-priority"><span class="badge medium">中</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>使用 title.template 统一品牌后缀</h4>
+            <p>在 <code>src/app/[locale]/layout.tsx</code> 第 27 行将 <code>template: "%s"</code> 改为 <code>template: "%s | Dead or Alive 6 Last Round Wiki"</code>，并从详情页代码中移除手动拼接的 <code>- ${'$'}{messages.site.name}</code>。</p>
+          </div>
+          <div class="step-priority"><span class="badge medium">中</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>为主页 FAQ 添加 FAQPage JSON-LD</h4>
+            <p>在 <code>src/app/[locale]/page.tsx</code> 中基于 <code>messages.home.faq.items</code> 输出 FAQPage schema，争取 SERP 富媒体结果。</p>
+          </div>
+          <div class="step-priority"><span class="badge medium">中</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>为非首屏图片添加 lazy loading</h4>
+            <p>检查所有 <code>&lt;Image&gt;</code> 使用，对非首屏图片显式设置 <code>loading="lazy"</code>（或保留默认 <code>priority={false}</code>）。hero 图保持 <code>priority</code> 优化 LCP。</p>
+          </div>
+          <div class="step-priority"><span class="badge medium">中</span></div>
+        </div>
+
+        <div class="action-item">
+          <div class="step-num"></div>
+          <div class="step-body">
+            <h4>生产环境性能复测</h4>
+            <p>使用 <code>next build &amp;&amp; next start</code> 启动生产版本，访问 <a href="https://pagespeed.web.dev" target="_blank">PageSpeed Insights</a> 测量 LCP/INP/CLS，验证 Core Web Vitals 达标。</p>
+          </div>
+          <div class="step-priority"><span class="badge low">低</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span>附录：审计方法与证据</h2>
+      <h3>审计工具</h3>
+      <ul>
+        <li><strong>Playwright MCP</strong>：渲染页面并执行 JS 收集 DOM/性能数据</li>
+        <li><strong>PowerShell Invoke-WebRequest</strong>：抓取 robots.txt、sitemap.xml、响应头</li>
+        <li><strong>源码审查</strong>：直接读取 <code>src/app/</code>、<code>src/i18n/</code>、<code>src/config/</code> 关键文件</li>
+      </ul>
+
+      <h3>被审计的页面样本</h3>
+      <table>
+        <thead><tr><th>URL</th><th>类型</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td><code>http://localhost:3001/</code></td><td>主页（en，重写自 /en）</td><td>首页 SEO 基线</td></tr>
+          <tr><td><code>http://localhost:3001/ja</code></td><td>主页（ja）</td><td>验证非英语 locale hreflang</td></tr>
+          <tr><td><code>http://localhost:3001/en/characters</code></td><td>列表页（en）</td><td>验证列表页 hreflang 与 ItemList schema</td></tr>
+          <tr><td><code>http://localhost:3001/ja/guide/dead-or-alive-6-last-round-beginner-guide</code></td><td>详情页（ja）</td><td>验证详情页 hreflang、Article schema、BreadcrumbList</td></tr>
+        </tbody>
+      </table>
+
+      <h3>关键源码文件</h3>
+      <ul>
+        <li><code>src/i18n/routing.ts</code> - locale 配置与 localeDetection</li>
+        <li><code>src/middleware.ts</code> - next-intl middleware，<code>alternateLinks: false</code></li>
+        <li><code>src/app/sitemap.ts</code> - sitemap 生成逻辑</li>
+        <li><code>src/app/robots.ts</code> - robots.txt 生成</li>
+        <li><code>src/app/[locale]/layout.tsx</code> - 布局层 metadata 与 Organization schema</li>
+        <li><code>src/app/[locale]/page.tsx</code> - 主页 metadata 与 WebSite schema</li>
+        <li><code>src/app/[locale]/[...slug]/page.tsx</code> - 详情/列表页 metadata（hreflang 正确实现）</li>
+        <li><code>src/locales/{en,ja,ko,es}.json</code> - 翻译资源</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>SEO 审计报告 - 由 seo-audit skill 生成于 2026-06-25</p>
+      <p>报告基于 http://localhost:3001/ 的实际渲染与源码审查。生产环境性能数值需另行测量。</p>
+    </div>
+  </footer>
+</body>
+</html>

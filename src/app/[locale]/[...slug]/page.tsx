@@ -10,25 +10,10 @@ import { Breadcrumbs, JsonLd, WikiSidebar, localizeHref } from "@/components/sit
 import { MobileTOC, SidebarTOC } from "@/components/table-of-contents";
 import { CONTENT_TYPES } from "@/config/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import { absoluteUrl, defaultSeoImagePath, languageAlternates, localizedPath, siteUrl } from "@/lib/seo";
 import en from "@/locales/en.json";
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://dead-or-alive-6-last-round.wiki").replace(/\/$/, "");
 type Messages = typeof en;
-const defaultImagePath = "/images/hero.webp";
-
-function languageAlternates(pathname: string) {
-  return Object.fromEntries(routing.locales.map((locale) => [locale, locale === "en" ? pathname : `/${locale}${pathname}`]));
-}
-
-function localizedPath(pathname: string, locale: Locale) {
-  return locale === "en" ? pathname : `/${locale}${pathname}`;
-}
-
-function absoluteUrl(pathname: string, locale?: Locale) {
-  if (pathname.startsWith("http")) return pathname;
-  const path = locale ? localizedPath(pathname, locale) : pathname;
-  return `${siteUrl}${path}`;
-}
 
 export async function generateStaticParams() {
   const paths = await getAllContentPaths("en");
@@ -49,15 +34,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       title,
       description,
       alternates: { canonical: localizedPath(`/${ct}`, locale), languages: languageAlternates(`/${ct}`) },
-      openGraph: { title, description, url: absoluteUrl(`/${ct}`, locale), images: [absoluteUrl(defaultImagePath)] },
-      twitter: { card: "summary_large_image", title, description, images: [absoluteUrl(defaultImagePath)] },
+      openGraph: { title, description, url: absoluteUrl(`/${ct}`, locale), images: [absoluteUrl(defaultSeoImagePath)] },
+      twitter: { card: "summary_large_image", title, description, images: [absoluteUrl(defaultSeoImagePath)] },
     };
   }
   const [contentType, ...articleSlug] = slug;
   const item = await getContent(contentType, articleSlug, locale);
   if (!item) return { title: "Not Found" };
   const pathname = `/${contentType}/${articleSlug.join("/")}`;
-  const image = absoluteUrl(item.metadata.image ?? defaultImagePath);
+  const image = absoluteUrl(item.metadata.image ?? defaultSeoImagePath);
   return { title: `${item.metadata.title} - ${messages.site.name}`, description: item.metadata.description, alternates: { canonical: localizedPath(pathname, locale), languages: languageAlternates(pathname) }, openGraph: { type: "article", title: item.metadata.title, description: item.metadata.description, url: absoluteUrl(pathname, locale), images: [image] }, twitter: { card: "summary_large_image", title: item.metadata.title, description: item.metadata.description, images: [image] } };
 }
 
@@ -90,7 +75,7 @@ async function DetailPage({ locale, contentType, slug, navGroups }: { locale: Lo
   const pathname = `/${contentType}/${slug.join("/")}`;
   const tocLabel = messages.shared.tableOfContents || messages.shared.inThisSection || "Table of Contents";
   const sectionLabel = contentType.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-  const articleImage = absoluteUrl(item.metadata.image ?? defaultImagePath);
+  const articleImage = absoluteUrl(item.metadata.image ?? defaultSeoImagePath);
   const articleData = { "@context": "https://schema.org", "@type": "Article", headline: item.metadata.title, description: item.metadata.description, image: articleImage, datePublished: item.metadata.date, dateModified: item.metadata.lastModified ?? item.metadata.date, mainEntityOfPage: absoluteUrl(pathname, locale), author: { "@type": "Organization", name: messages.site.name }, publisher: { "@type": "Organization", name: messages.site.name, logo: { "@type": "ImageObject", url: `${siteUrl}/android-chrome-512x512.png` } } };
   const breadcrumbData = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/", locale) }, { "@type": "ListItem", position: 2, name: sectionLabel, item: absoluteUrl(`/${contentType}`, locale) }, { "@type": "ListItem", position: 3, name: item.metadata.title, item: absoluteUrl(pathname, locale) }] };
 
