@@ -6,12 +6,16 @@ import { routing } from "./routing";
 // When adding a language: add an import here AND an entry in `messagesMap`.
 import en from "@/locales/en.json";
 import ja from "@/locales/ja.json";
+import ko from "@/locales/ko.json";
+import es from "@/locales/es.json";
 
 type Messages = typeof en;
 
 const messagesMap: Record<string, Partial<Messages>> = {
   en,
   ja: ja as unknown as Partial<Messages>,
+  ko: ko as unknown as Partial<Messages>,
+  es: es as unknown as Partial<Messages>,
 };
 
 /**
