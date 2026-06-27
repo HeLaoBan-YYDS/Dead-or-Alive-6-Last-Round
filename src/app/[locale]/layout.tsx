@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ThemeProvider } from "next-themes";
+import { TopNavAd } from "@/components/ads/top-nav-ad";
 import { JsonLd, SiteFooter, SiteHeader } from "@/components/site";
 import { routing } from "@/i18n/routing";
 import { absoluteUrl, defaultSeoImagePath, languageAlternates, openGraphLocale, siteUrl } from "@/lib/seo";
@@ -86,6 +87,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <NextIntlClientProvider messages={messages}>
             <JsonLd data={organization} />
             <SiteHeader locale={locale} />
+            <TopNavAd />
             {children}
             <SiteFooter locale={locale} />
           </NextIntlClientProvider>

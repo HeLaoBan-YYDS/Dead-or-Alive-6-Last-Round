@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea6a923-81f0-4487-95c6-51fed8751e13" name="Changes" comment="监控代码">
+    <list default="true" id="bea6a923-81f0-4487-95c6-51fed8751e13" name="Changes" comment="国际化">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/[...slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/[...slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/site.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/site.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mdx-components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/mdx-components.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
       <workItem from="1782181933450" duration="2000" />
       <workItem from="1782356227045" duration="16526000" />
       <workItem from="1782524280849" duration="62000" />
-      <workItem from="1782539627724" duration="1147000" />
+      <workItem from="1782539627724" duration="4388000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <option name="closed" value="true" />
@@ -192,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782524314206</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="国际化">
+      <option name="closed" value="true" />
+      <created>1782546408921</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1782546408921</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +226,7 @@
     <MESSAGE value="多语言问题修复" />
     <MESSAGE value="修复SEO异常" />
     <MESSAGE value="监控代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="监控代码" />
+    <MESSAGE value="国际化" />
+    <option name="LAST_COMMIT_MESSAGE" value="国际化" />
   </component>
 </project>
