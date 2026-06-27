@@ -2,6 +2,11 @@ import fs from "fs";
 import path from "path";
 import { CONTENT_TYPES as CONFIG_CONTENT_TYPES } from "@/config/navigation";
 import { routing, type Locale } from "@/i18n/routing";
+import enMessages from "@/locales/en.json";
+import esMessages from "@/locales/es.json";
+import jaMessages from "@/locales/ja.json";
+import koMessages from "@/locales/ko.json";
+import { toHeadingId } from "@/lib/heading";
 
 // 从统一配置导入内容类型
 export const CONTENT_TYPES = CONFIG_CONTENT_TYPES;
@@ -94,12 +99,7 @@ function extractHeadings(mdxSource: string): Heading[] {
     if (match) {
       const level = match[1].length;
       const text = match[2].replace(/\{[^}]*\}/g, "").trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "");
+      const id = toHeadingId(text);
       headings.push({ id, text, level });
     }
   }
@@ -248,11 +248,19 @@ const GROUP_TITLES: Record<string, string> = {
 };
 
 // locale → 分组标题映射
-const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {
+const GROUP_TITLES_BY_LOCALE: Record<Locale, Partial<Record<string, string>>> = {
+  en: enMessages.nav,
+  ja: jaMessages.nav,
+  ko: koMessages.nav,
+  es: esMessages.nav,
 };
 
 // locale → "Overview" 翻译
-const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {
+const OVERVIEW_LABEL_BY_LOCALE: Record<Locale, string> = {
+  en: "Overview",
+  ja: "概要",
+  ko: "개요",
+  es: "Resumen",
 };
 
 // 分组排序顺序
