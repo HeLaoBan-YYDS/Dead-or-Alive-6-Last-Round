@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { JsonLd, WikiSidebar } from "@/components/site";
 import { getAllContent, getDynamicNavigation, type ContentItem, CONTENT_TYPES } from "@/lib/content";
 import { routing, type Locale } from "@/i18n/routing";
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LocaleHomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc = locale as Locale;
+  setRequestLocale(loc);
   const messages = (await getMessages({ locale })) as Messages;
   const navGroups = getDynamicNavigation(loc);
   const webSite = { "@context": "https://schema.org", "@type": "WebSite", name: messages.site.name, alternateName: messages.site.shortName, url: absoluteUrl("/", loc), description: messages.site.description, inLanguage: locale };

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Swords } from "lucide-react";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { Badge } from "@/components/ui/badge";
 import { getAllContent, getAllContentPaths, getContent, getDynamicNavigation, type ContentItem } from "@/lib/content";
 import { Breadcrumbs, JsonLd, WikiSidebar, localizeHref } from "@/components/site";
@@ -16,9 +16,13 @@ import en from "@/locales/en.json";
 type Messages = typeof en;
 
 export async function generateStaticParams() {
-  const paths = await getAllContentPaths("en");
-  const listingPages = CONTENT_TYPES.map((ct) => ({ slug: [ct] }));
-  return [...listingPages, ...paths.map((item) => ({ slug: [item.contentType, ...item.slug] }))];
+  // 关键：必须为每个 locale × slug 组合都返回一条记录，
+  // 否则 Next.js 不知道要为哪些 locale 预渲染 HTML，会跳过预渲染。
+  const enPaths = await getAllContentPaths("en");
+  const slugParams = enPaths.map((item) => ({ slug: [item.contentType, ...item.slug] as string[] }));
+  const listingPages = CONTENT_TYPES.map((ct) => ({ slug: [ct] as string[] }));
+  const allParams = [...listingPages, ...slugParams];
+  return routing.locales.flatMap((locale) => allParams.map((p) => ({ locale, ...p })));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale; slug: string[] }> }): Promise<Metadata> {
@@ -48,6 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 export default async function SlugPage({ params }: { params: Promise<{ locale: Locale; slug: string[] }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const navGroups = getDynamicNavigation(locale);
   if (slug.length === 1) return <NavigationPage locale={locale} contentType={slug[0]} navGroups={navGroups} />;
   return <DetailPage locale={locale} contentType={slug[0]} slug={slug.slice(1)} navGroups={navGroups} />;
@@ -55,6 +60,7 @@ export default async function SlugPage({ params }: { params: Promise<{ locale: L
 
 async function NavigationPage({ locale, contentType, navGroups }: { locale: Locale; contentType: string; navGroups: import("@/lib/content").NavGroup[] }) {
   if (!CONTENT_TYPES.includes(contentType)) notFound();
+  setRequestLocale(locale);
   const messages = (await getMessages({ locale })) as Messages;
   const items = await getAllContent(contentType, locale);
   const listData = { "@context": "https://schema.org", "@type": "ItemList", name: `${contentType} - ${messages.site.name}`, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, url: absoluteUrl(`/${contentType}/${item.slug}`, locale), name: item.metadata.title })) };
@@ -69,6 +75,7 @@ async function NavigationPage({ locale, contentType, navGroups }: { locale: Loca
 
 async function DetailPage({ locale, contentType, slug, navGroups }: { locale: Locale; contentType: string; slug: string[]; navGroups: import("@/lib/content").NavGroup[] }) {
   if (!CONTENT_TYPES.includes(contentType)) notFound();
+  setRequestLocale(locale);
   const messages = (await getMessages({ locale })) as Messages;
   const item = await getContent(contentType, slug, locale);
   if (!item) notFound();
